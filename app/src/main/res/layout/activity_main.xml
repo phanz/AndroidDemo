@@ -12,4 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Aidl" />
+
+    <Button
+        android:id="@+id/recycler_view_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView" />
 </LinearLayout>
