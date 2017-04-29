@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.demo.aidl.client.BinderClientActivity;
+import com.example.demo.customview.CustomViewActivity;
 import com.example.demo.fragment.FragmentActivity;
 import com.example.demo.gesture.SimpleGestureActivity;
 import com.example.demo.recyclerview.activity.ItemDecorationActivity;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mItemDecoration;
     private Button mFragmentBtn;
     private Button mGestureBtn;
+    private Button mCustomViewBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +69,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent gestureIntent = new Intent(MainActivity.this, SimpleGestureActivity.class);
                 startActivity(gestureIntent);
+            }
+        });
+
+        mCustomViewBtn = (Button)findViewById(R.id.custom_view_btn);
+        mCustomViewBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent customViewIntent = new Intent(MainActivity.this, CustomViewActivity.class);
+                startActivity(customViewIntent);
             }
         });
     }
