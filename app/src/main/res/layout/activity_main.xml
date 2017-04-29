@@ -55,4 +55,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Custom View"/>
+
+    <Button
+        android:id="@+id/expandable_list_view_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ExpandableListView"/>
 </LinearLayout>

@@ -28,7 +28,8 @@
         <activity android:name=".recyclerview.activity.ItemDecorationActivity" />
         <activity android:name=".fragment.FragmentActivity" />
         <activity android:name=".gesture.SimpleGestureActivity" />
-        <activity android:name=".customview.CustomViewActivity"></activity>
+        <activity android:name=".customview.CustomViewActivity" />
+        <activity android:name=".expandablelistview.ExpandableListViewActivity"></activity>
     </application>
 
 </manifest>
