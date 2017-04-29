@@ -14,19 +14,26 @@
         android:textAllCaps="false"
         android:text="Aidl" />
 
-    <Button
-        android:id="@+id/recycler_view_btn"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="RecyclerView" />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/item_decoration_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="ItemDecoration" />
+        <Button
+            android:id="@+id/recycler_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="RecyclerView" />
+
+        <Button
+            android:id="@+id/item_decoration_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="ItemDecoration" />
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/fragment_btn"
@@ -34,4 +41,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="Fragment" />
+
+    <Button
+        android:id="@+id/gesture_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Gesture" />
 </LinearLayout>

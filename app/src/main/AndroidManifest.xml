@@ -26,7 +26,8 @@
         <activity android:name=".recyclerview.activity.RecyclerViewActivity" />
         <activity android:name=".recyclerview.activity.StaggeredGridLayoutActivity" />
         <activity android:name=".recyclerview.activity.ItemDecorationActivity" />
-        <activity android:name=".fragment.FragmentActivity"></activity>
+        <activity android:name=".fragment.FragmentActivity"/>
+        <activity android:name=".gesture.SimpleGestureActivity"/>
     </application>
 
 </manifest>
