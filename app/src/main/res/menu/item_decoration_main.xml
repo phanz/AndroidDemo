@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/simple_padding"
+        android:title="SimplePadding"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/simple_divider"
+        android:title="SimpleDivider"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/section_decoration"
+        android:title="SectionDecoration"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/pinned_section_decoration"
+        android:title="PinnedSectionDecoration"
+        app:showAsAction="never"/>
+</menu>

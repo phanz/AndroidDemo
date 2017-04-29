@@ -23,8 +23,9 @@
             android:process=":remote" />
 
         <activity android:name=".aidl.client.BinderClientActivity" />
-        <activity android:name=".recyclerview.activity.RecyclerViewActivity"></activity>
-        <activity android:name=".recyclerview.activity.StaggeredGridLayoutActivity"/>
+        <activity android:name=".recyclerview.activity.RecyclerViewActivity" />
+        <activity android:name=".recyclerview.activity.StaggeredGridLayoutActivity" />
+        <activity android:name=".recyclerview.activity.ItemDecorationActivity"></activity>
     </application>
 
 </manifest>

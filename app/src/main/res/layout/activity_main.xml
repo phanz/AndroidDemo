@@ -11,11 +11,20 @@
         android:id="@+id/aidl_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Aidl" />
 
     <Button
         android:id="@+id/recycler_view_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="RecyclerView" />
+
+    <Button
+        android:id="@+id/item_decoration_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ItemDecoration" />
 </LinearLayout>

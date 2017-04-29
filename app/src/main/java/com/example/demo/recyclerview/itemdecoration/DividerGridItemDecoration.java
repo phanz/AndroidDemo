@@ -1,4 +1,4 @@
-package com.example.demo.recyclerview.divider;
+package com.example.demo.recyclerview.itemdecoration;
 
 import android.content.Context;
 import android.content.res.TypedArray;

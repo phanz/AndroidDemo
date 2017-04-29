@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import com.example.demo.R;
 import com.example.demo.recyclerview.adapter.HomeAdapter;
-import com.example.demo.recyclerview.divider.DividerGridItemDecoration;
+import com.example.demo.recyclerview.itemdecoration.DividerGridItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
