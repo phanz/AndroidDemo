@@ -33,14 +33,13 @@ public class PersonView extends TextView {
         int weight = tArray.getInt(R.styleable.PersonAttr_weight, 1);
 
         // 如果你设置为DP等单位，会做像素转换
-        float textSize = tArray.getDimension(R.styleable.PersonAttr_textSize,
-                getResources().getDimension(R.dimen.default_person_view_text_size));
+        //float textSize = tArray.getDimension(R.styleable.PersonAttr_textSize, getResources().getDimension(R.dimen.default_person_view_text_size));
 
         String adultStr = getAdultStatus(adult);
         String weightStr = getWeightStatus(weight);
 
         tArray.recycle();
-        setTextSize(textSize);
+        //setTextSize(textSize);
 
         String text = String.format("姓名：%s\n年龄：%s\n是否成年：%s\n体形：%s",
                                         name,age,adultStr,weightStr);

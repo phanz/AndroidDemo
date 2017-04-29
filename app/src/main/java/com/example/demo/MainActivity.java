@@ -1,9 +1,14 @@
 package com.example.demo;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.demo.aidl.client.BinderClientActivity;
@@ -14,6 +19,8 @@ import com.example.demo.gesture.SimpleGestureActivity;
 import com.example.demo.recyclerview.activity.ItemDecorationActivity;
 import com.example.demo.recyclerview.activity.RecyclerViewActivity;
 import com.example.demo.widget.WidgetActivity;
+
+import java.io.File;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -103,5 +110,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
+    }
+
+    public AlertDialog crateDialog(Context context){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context)
+                .setTitle("Dialog")
+                .setMessage("This is a Dialog");
+
+        final AlertDialog dialog = builder.create();
+        dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_TOAST);
+        dialog.show();
+
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        params.width = 800;
+        params.height = 1300;
+        dialog.getWindow().setAttributes(params);
+        return dialog;
+    }
+
+    public void shareMsg(String activityTitle, String msgTitle, String msgText,String imgPath) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        if (imgPath == null || imgPath.equals("")) {
+            intent.setType("text/plain"); // 纯文本
+        } else {
+            File f = new File(imgPath);
+            if (f != null && f.exists() && f.isFile()) {
+                intent.setType("image/jpg");
+                Uri u = Uri.fromFile(f);
+                intent.putExtra(Intent.EXTRA_STREAM, u);
+            }
+        }
+        intent.putExtra(Intent.EXTRA_SUBJECT, msgTitle);
+        intent.putExtra(Intent.EXTRA_TEXT, msgText);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(Intent.createChooser(intent, activityTitle));
+    }
+
+    public void shareSingleImage(String imagePath) {
+        //String imagePath = Environment.getExternalStorageDirectory() + File.separator + "test.jpg";
+        File file = new File(imagePath);
+        long len = file.length();
+        //由文件得到uri
+        Uri imageUri = Uri.fromFile(new File(imagePath));
+        Log.d("share", "uri:" + imageUri);  //输出：file:///storage/emulated/0/test.jpg
+        Intent shareIntent = new Intent();
+        shareIntent.setAction(Intent.ACTION_SEND);
+        shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
+        shareIntent.setType("image/*");
+        startActivity(Intent.createChooser(shareIntent, "分享到"));
     }
 }

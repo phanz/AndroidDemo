@@ -26,7 +26,14 @@
 
     <com.example.demo.widget.StaticTextPaintView
         android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginTop="40dp" />
+
+    <com.example.demo.widget.SwitchButton
+        android:id="@+id/switch_btn"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"/>
+        android:checked="true"
+        android:layout_marginTop="10dp" />
 
 </LinearLayout>

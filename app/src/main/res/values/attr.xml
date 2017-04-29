@@ -10,6 +10,22 @@
             <flag name="thin" value="0" />
         </attr>
         <attr name="adult" format="boolean" />
+        <!--<attr name="textSize" format="dimension" />-->
+    </declare-styleable>
+
+    <declare-styleable name="switch_TextAppearance">
+        <attr name="textColor" format="color" />
         <attr name="textSize" format="dimension" />
+        <attr name="textStyle">
+            <flag name="normal" value="0" />
+            <flag name="bold" value="1" />
+            <flag name="italic" value="2" />
+        </attr>
+        <attr name="typeface">
+            <enum name="normal" value="0" />
+            <enum name="sans" value="1" />
+            <enum name="serif" value="2" />
+            <enum name="monospace" value="3" />
+        </attr>
     </declare-styleable>
 </resources>

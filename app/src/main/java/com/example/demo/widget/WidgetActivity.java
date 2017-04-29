@@ -12,7 +12,9 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +27,8 @@ public class WidgetActivity extends AppCompatActivity {
 
     private EditText mEditText;
     private TextView mImageText;
+
+    private SwitchButton mSwitchButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +43,15 @@ public class WidgetActivity extends AppCompatActivity {
 
         addEditSpan(mEditText);
         mImageText.setText(Html.fromHtml(descString(),getImageGetterInstance(),null));
+
+        mSwitchButton = (SwitchButton)findViewById(R.id.switch_btn);
+
+        mSwitchButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("TAG","SwitchButton");
+            }
+        });
     }
 
     private void initTitleBar(){
