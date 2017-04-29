@@ -13,6 +13,7 @@ import com.example.demo.fragment.FragmentActivity;
 import com.example.demo.gesture.SimpleGestureActivity;
 import com.example.demo.recyclerview.activity.ItemDecorationActivity;
 import com.example.demo.recyclerview.activity.RecyclerViewActivity;
+import com.example.demo.widget.WidgetActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -23,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mGestureBtn;
     private Button mCustomViewBtn;
     private Button mExpandableListViewBtn;
+    private Button mWidgetBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mExpandableListViewBtn = (Button)findViewById(R.id.expandable_list_view_btn);
         mExpandableListViewBtn.setOnClickListener(this);
+
+        mWidgetBtn = (Button)findViewById(R.id.widget_btn);
+        mWidgetBtn.setOnClickListener(this);
 
     }
 
@@ -89,6 +94,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.expandable_list_view_btn:
                 Intent expandableListViewIntent = new Intent(MainActivity.this, ExpandableListViewActivity.class);
                 startActivity(expandableListViewIntent);
+                break;
+
+            case R.id.widget_btn:
+                Intent widgetIntent = new Intent(MainActivity.this, WidgetActivity.class);
+                startActivity(widgetIntent);
                 break;
             default:
                 break;

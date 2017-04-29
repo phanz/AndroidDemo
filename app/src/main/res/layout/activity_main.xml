@@ -62,4 +62,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="ExpandableListView"/>
+
+    <Button
+        android:id="@+id/widget_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="基本控件用法"/>
 </LinearLayout>
