@@ -27,4 +27,11 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="ItemDecoration" />
+
+    <Button
+        android:id="@+id/fragment_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Fragment" />
 </LinearLayout>

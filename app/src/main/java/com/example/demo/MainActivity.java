@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.demo.aidl.client.BinderClientActivity;
+import com.example.demo.fragment.FragmentActivity;
 import com.example.demo.recyclerview.activity.ItemDecorationActivity;
 import com.example.demo.recyclerview.activity.RecyclerViewActivity;
 
@@ -15,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mAidlBtn;
     private Button mRecyclerBtn;
     private Button mItemDecoration;
+    private Button mFragmentBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent itemDecorationIntent = new Intent(MainActivity.this, ItemDecorationActivity.class);
                 startActivity(itemDecorationIntent);
+            }
+        });
+
+        mFragmentBtn = (Button)findViewById(R.id.fragment_btn);
+        mFragmentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fragmentIntent = new Intent(MainActivity.this, FragmentActivity.class);
+                startActivity(fragmentIntent);
             }
         });
     }

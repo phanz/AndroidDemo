@@ -25,7 +25,8 @@
         <activity android:name=".aidl.client.BinderClientActivity" />
         <activity android:name=".recyclerview.activity.RecyclerViewActivity" />
         <activity android:name=".recyclerview.activity.StaggeredGridLayoutActivity" />
-        <activity android:name=".recyclerview.activity.ItemDecorationActivity"></activity>
+        <activity android:name=".recyclerview.activity.ItemDecorationActivity" />
+        <activity android:name=".fragment.FragmentActivity"></activity>
     </application>
 
 </manifest>
