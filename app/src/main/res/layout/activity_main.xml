@@ -1,72 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.example.demo.MainActivity">
-
-    <Button
-        android:id="@+id/aidl_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Aidl" />
-
+    android:layout_height="wrap_content">
     <LinearLayout
+        android:id="@+id/activity_main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.example.demo.MainActivity">
 
         <Button
-            android:id="@+id/recycler_view_btn"
+            android:id="@+id/aidl_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="RecyclerView" />
+            android:text="Aidl" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/recycler_view_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="RecyclerView" />
+
+            <Button
+                android:id="@+id/item_decoration_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="ItemDecoration" />
+
+        </LinearLayout>
 
         <Button
-            android:id="@+id/item_decoration_btn"
+            android:id="@+id/fragment_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="ItemDecoration" />
+            android:text="Fragment" />
 
+        <Button
+            android:id="@+id/gesture_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Gesture" />
+
+        <Button
+            android:id="@+id/custom_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Custom View"/>
+
+        <Button
+            android:id="@+id/expandable_list_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="ExpandableListView"/>
+
+        <Button
+            android:id="@+id/widget_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="基本控件用法"/>
+
+        <Button
+            android:id="@+id/rxjava_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="RxJava"/>
+
+        <Button
+            android:id="@+id/permission_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="动态权限申请"/>
+
+        <Button
+            android:id="@+id/snack_bar_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="SnackBar"/>
+
+        <Button
+            android:id="@+id/compound_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="CompoundButton"/>
+
+        <Button
+            android:id="@+id/h_scroll_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="自定义简单横向滑动控件"/>
+
+        <Button
+            android:id="@+id/h_scroll_view_btn_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="自定义简单横向滑动控件2"/>
     </LinearLayout>
-
-    <Button
-        android:id="@+id/fragment_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Fragment" />
-
-    <Button
-        android:id="@+id/gesture_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Gesture" />
-
-    <Button
-        android:id="@+id/custom_view_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Custom View"/>
-
-    <Button
-        android:id="@+id/expandable_list_view_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="ExpandableListView"/>
-
-    <Button
-        android:id="@+id/widget_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="基本控件用法"/>
-</LinearLayout>
+</ScrollView>

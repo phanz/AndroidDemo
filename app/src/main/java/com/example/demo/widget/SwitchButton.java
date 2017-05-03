@@ -162,12 +162,12 @@ public class SwitchButton extends CompoundButton {
 
     public void setSwitchTextAppearance(Context context, int resid) {
         TypedArray appearance = context.obtainStyledAttributes(resid,
-                R.styleable.switch_TextAppearance);
+                R.styleable.TextAppearance);
 
         ColorStateList colors;
         int ts;
 
-        colors = appearance.getColorStateList(R.styleable.switch_TextAppearance_textColor);
+        colors = appearance.getColorStateList(R.styleable.TextAppearance_textColor);
         if (colors != null) {
             mTextColors = colors;
         } else {
@@ -176,7 +176,7 @@ public class SwitchButton extends CompoundButton {
             mTextColors = getTextColors();
         }
 
-        ts = appearance.getDimensionPixelSize(R.styleable.switch_TextAppearance_textSize, 0);
+        ts = appearance.getDimensionPixelSize(R.styleable.TextAppearance_textSize, 0);
         if (ts != 0) {
             if (ts != mTextPaint.getTextSize()) {
                 mTextPaint.setTextSize(ts);
@@ -186,8 +186,8 @@ public class SwitchButton extends CompoundButton {
 
         int typefaceIndex, styleIndex;
 
-        typefaceIndex = appearance.getInt(R.styleable.switch_TextAppearance_typeface, -1);
-        styleIndex = appearance.getInt(R.styleable.switch_TextAppearance_textStyle, -1);
+        typefaceIndex = appearance.getInt(R.styleable.TextAppearance_typeface, -1);
+        styleIndex = appearance.getInt(R.styleable.TextAppearance_textStyle, -1);
 
         setSwitchTypefaceByIndex(typefaceIndex, styleIndex);
         appearance.recycle();
