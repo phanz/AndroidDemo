@@ -18,6 +18,7 @@ import com.example.demo.customview.CustomViewActivity;
 import com.example.demo.expandablelistview.ExpandableListViewActivity;
 import com.example.demo.fragment.FragmentActivity;
 import com.example.demo.gesture.SimpleGestureActivity;
+import com.example.demo.listview.ListViewActivity;
 import com.example.demo.permission.PermissionActivity;
 import com.example.demo.recyclerview.activity.ItemDecorationActivity;
 import com.example.demo.recyclerview.activity.RecyclerViewActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mCompoundBtn;
     private Button mHScrollBtn;
     private Button mHScrollBtn2;
+    private Button mListViewBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +94,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mHScrollBtn2 = (Button)findViewById(R.id.h_scroll_view_btn_2);
         mHScrollBtn2.setOnClickListener(this);
+
+        mListViewBtn = (Button)findViewById(R.id.list_view_btn);
+        mListViewBtn.setOnClickListener(this);
 
     }
 
@@ -167,6 +172,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.h_scroll_view_btn_2:
                 Intent hScrollViewIntent2 = new Intent(MainActivity.this, HScrollView2Activity.class);
                 startActivity(hScrollViewIntent2);
+                break;
+
+            case R.id.list_view_btn:
+                Intent listViewIntent = new Intent(MainActivity.this, ListViewActivity.class);
+                startActivity(listViewIntent);
                 break;
             default:
                 break;
