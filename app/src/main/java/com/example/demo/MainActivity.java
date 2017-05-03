@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 
 import com.example.demo.aidl.client.BinderClientActivity;
+import com.example.demo.alarmmanager.AlarmManagerActivity;
 import com.example.demo.compoundbutton.CompoundButtonActivity;
 import com.example.demo.customview.CustomViewActivity;
 import com.example.demo.expandablelistview.ExpandableListViewActivity;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mHScrollBtn;
     private Button mHScrollBtn2;
     private Button mListViewBtn;
+    private Button mAlarmManagerBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,6 +100,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mListViewBtn = (Button)findViewById(R.id.list_view_btn);
         mListViewBtn.setOnClickListener(this);
 
+        mAlarmManagerBtn = (Button)findViewById(R.id.alarm_manager_btn);
+        mAlarmManagerBtn.setOnClickListener(this);
     }
 
     @Override
@@ -178,6 +182,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent listViewIntent = new Intent(MainActivity.this, ListViewActivity.class);
                 startActivity(listViewIntent);
                 break;
+
+            case R.id.alarm_manager_btn:
+                Intent alarmManagerIntent = new Intent(MainActivity.this, AlarmManagerActivity.class);
+                startActivity(alarmManagerIntent);
+                break;
+
+
             default:
                 break;
         }
