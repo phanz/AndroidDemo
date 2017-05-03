@@ -44,7 +44,9 @@
 
         <receiver android:name=".alarmmanager.AlertBroadcastReceiver" />
 
-        <activity android:name=".ormlite.OrmLiteActivity"></activity>
+        <activity android:name=".ormlite.OrmLiteActivity" />
+        <activity android:name=".swiperefresh.SwipeRefreshActivity" />
+        <activity android:name=".popup.PopupActivity"></activity>
     </application>
 
 </manifest>

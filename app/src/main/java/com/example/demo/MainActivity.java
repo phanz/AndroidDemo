@@ -21,12 +21,14 @@ import com.example.demo.gesture.SimpleGestureActivity;
 import com.example.demo.listview.ListViewActivity;
 import com.example.demo.ormlite.OrmLiteActivity;
 import com.example.demo.permission.PermissionActivity;
+import com.example.demo.popup.PopupActivity;
 import com.example.demo.recyclerview.activity.ItemDecorationActivity;
 import com.example.demo.recyclerview.activity.RecyclerViewActivity;
 import com.example.demo.rxjava.RxJavaActivity;
 import com.example.demo.simpleHScrollView.HScrollViewActivity;
 import com.example.demo.simpleHScrollView2.HScrollView2Activity;
 import com.example.demo.snackbar.SnackBarActivity;
+import com.example.demo.swiperefresh.SwipeRefreshActivity;
 import com.example.demo.widget.WidgetActivity;
 
 import java.io.File;
@@ -50,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mListViewBtn;
     private Button mAlarmManagerBtn;
     private Button mOrmLiteBtn;
+    private Button mSwipeRefreshBtn;
+    private Button mPopupBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,6 +110,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mOrmLiteBtn = (Button)findViewById(R.id.orm_lite_btn);
         mOrmLiteBtn.setOnClickListener(this);
+
+        mSwipeRefreshBtn = (Button)findViewById(R.id.swipe_refresh_btn);
+        mSwipeRefreshBtn.setOnClickListener(this);
+
+        mPopupBtn = (Button)findViewById(R.id.popup_btn);
+        mPopupBtn.setOnClickListener(this);
 
     }
 
@@ -198,6 +208,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(ormLiteIntent);
                 break;
 
+            case R.id.swipe_refresh_btn:
+                Intent swipeRefreshIntent = new Intent(MainActivity.this, SwipeRefreshActivity.class);
+                startActivity(swipeRefreshIntent);
+                break;
+
+            case R.id.popup_btn:
+                Intent popupIntent = new Intent(MainActivity.this, PopupActivity.class);
+                startActivity(popupIntent);
+                break;
+
             default:
                 break;
         }
@@ -250,4 +270,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         shareIntent.setType("image/*");
         startActivity(Intent.createChooser(shareIntent, "分享到"));
     }
+
 }
