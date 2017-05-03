@@ -38,9 +38,13 @@
         <activity android:name=".simpleHScrollView.HScrollViewActivity" />
         <activity android:name=".simpleHScrollView2.HScrollView2Activity" />
         <activity android:name=".listview.ListViewActivity" />
-        <activity android:name=".alarmmanager.AlarmManagerActivity"></activity>
-        <service android:name=".alarmmanager.PollingService"/>
-        <receiver android:name=".alarmmanager.AlertBroadcastReceiver"/>
+        <activity android:name=".alarmmanager.AlarmManagerActivity" />
+
+        <service android:name=".alarmmanager.PollingService" />
+
+        <receiver android:name=".alarmmanager.AlertBroadcastReceiver" />
+
+        <activity android:name=".ormlite.OrmLiteActivity"></activity>
     </application>
 
 </manifest>

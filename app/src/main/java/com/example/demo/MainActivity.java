@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.CompoundButton;
 
 import com.example.demo.aidl.client.BinderClientActivity;
 import com.example.demo.alarmmanager.AlarmManagerActivity;
@@ -20,6 +19,7 @@ import com.example.demo.expandablelistview.ExpandableListViewActivity;
 import com.example.demo.fragment.FragmentActivity;
 import com.example.demo.gesture.SimpleGestureActivity;
 import com.example.demo.listview.ListViewActivity;
+import com.example.demo.ormlite.OrmLiteActivity;
 import com.example.demo.permission.PermissionActivity;
 import com.example.demo.recyclerview.activity.ItemDecorationActivity;
 import com.example.demo.recyclerview.activity.RecyclerViewActivity;
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mHScrollBtn2;
     private Button mListViewBtn;
     private Button mAlarmManagerBtn;
+    private Button mOrmLiteBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,6 +103,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mAlarmManagerBtn = (Button)findViewById(R.id.alarm_manager_btn);
         mAlarmManagerBtn.setOnClickListener(this);
+
+        mOrmLiteBtn = (Button)findViewById(R.id.orm_lite_btn);
+        mOrmLiteBtn.setOnClickListener(this);
+
     }
 
     @Override
@@ -188,6 +193,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(alarmManagerIntent);
                 break;
 
+            case R.id.orm_lite_btn:
+                Intent ormLiteIntent = new Intent(MainActivity.this, OrmLiteActivity.class);
+                startActivity(ormLiteIntent);
+                break;
 
             default:
                 break;
