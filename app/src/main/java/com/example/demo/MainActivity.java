@@ -15,6 +15,7 @@ import com.example.demo.aidl.client.BinderClientActivity;
 import com.example.demo.alarmmanager.AlarmManagerActivity;
 import com.example.demo.compoundbutton.CompoundButtonActivity;
 import com.example.demo.customview.CustomViewActivity;
+import com.example.demo.dialog.AlertDialogActivity;
 import com.example.demo.expandablelistview.ExpandableListViewActivity;
 import com.example.demo.fragment.FragmentActivity;
 import com.example.demo.gesture.SimpleGestureActivity;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mOrmLiteBtn;
     private Button mSwipeRefreshBtn;
     private Button mPopupBtn;
+    private Button mDialogBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,6 +118,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mPopupBtn = (Button)findViewById(R.id.popup_btn);
         mPopupBtn.setOnClickListener(this);
+
+        mDialogBtn = (Button)findViewById(R.id.dialog_btn);
+        mDialogBtn.setOnClickListener(this);
 
     }
 
@@ -218,25 +223,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(popupIntent);
                 break;
 
+            case R.id.dialog_btn:
+                Intent dialogIntent = new Intent(MainActivity.this, AlertDialogActivity.class);
+                startActivity(dialogIntent);
+                break;
+
             default:
                 break;
         }
-    }
-
-    public AlertDialog crateDialog(Context context){
-        AlertDialog.Builder builder = new AlertDialog.Builder(context)
-                .setTitle("Dialog")
-                .setMessage("This is a Dialog");
-
-        final AlertDialog dialog = builder.create();
-        dialog.getWindow().setType(WindowManager.LayoutParams.TYPE_TOAST);
-        dialog.show();
-
-        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
-        params.width = 800;
-        params.height = 1300;
-        dialog.getWindow().setAttributes(params);
-        return dialog;
     }
 
     public void shareMsg(String activityTitle, String msgTitle, String msgText,String imgPath) {
