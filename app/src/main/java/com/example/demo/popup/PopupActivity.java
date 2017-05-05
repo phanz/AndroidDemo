@@ -5,19 +5,22 @@ import android.graphics.drawable.BitmapDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.demo.R;
+import com.example.utils.Utils;
 
 public class PopupActivity extends AppCompatActivity {
 
     private Button showView;
 
-    private PopupWindow popupWindow;
+    private PopupWindow pop;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,30 +30,28 @@ public class PopupActivity extends AppCompatActivity {
         showView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPopup(view);
+                showPopup(showView);
             }
         });
     }
 
-    public void showPopup(View v){
-        LinearLayout layout = new LinearLayout(this);
-        layout.setBackgroundColor(Color.GRAY);
-        TextView tv = new TextView(this);
-        tv.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-        tv.setText("I'm a pop -----------------------------!");
-        tv.setTextColor(Color.WHITE);
-        layout.addView(tv);
+    public void showPopup(View view){
+        LayoutInflater inflater = LayoutInflater.from(this);
+        LinearLayout shareBar = (LinearLayout) inflater
+                .inflate(R.layout.qrcode_share_bar,null);
 
-        popupWindow = new PopupWindow(layout,120,120);
-        popupWindow.setFocusable(true);
-        popupWindow.setOutsideTouchable(true);
-        popupWindow.setBackgroundDrawable(new BitmapDrawable());
+        pop = new PopupWindow(shareBar, WindowManager.LayoutParams.MATCH_PARENT,
+                WindowManager.LayoutParams.WRAP_CONTENT, false);
 
-        int[] location = new int[2];
-        v.getLocationOnScreen(location);
+        pop.setBackgroundDrawable(new BitmapDrawable());
+        pop.setOutsideTouchable(true);
+        pop.setFocusable(true);
+        pop.setAnimationStyle(R.style.anim_popup_bottombar);
+        pop.getContentView().measure(View.MeasureSpec.UNSPECIFIED,View.MeasureSpec.UNSPECIFIED);
 
-        popupWindow.showAtLocation(v, Gravity.BOTTOM, 0, 0);
-        //popupWindow.showAsDropDown(v,20,20,Gravity.TOP);
-        //popupWindow.showAtLocation(v, Gravity.NO_GRAVITY, location[0], location[1]+v.getHeight());
+        pop.showAsDropDown(view,0,0,Gravity.BOTTOM);
+        //pop.showAtLocation();
     }
+
+
 }
