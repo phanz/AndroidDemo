@@ -156,5 +156,12 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Dialog"/>
+
+        <Button
+            android:id="@+id/background_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Selector | layer-list | Shape"/>
     </LinearLayout>
 </ScrollView>

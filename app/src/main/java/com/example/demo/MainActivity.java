@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.example.demo.aidl.client.BinderClientActivity;
 import com.example.demo.alarmmanager.AlarmManagerActivity;
+import com.example.demo.background.BackgroundActivity;
 import com.example.demo.compoundbutton.CompoundButtonActivity;
 import com.example.demo.customview.CustomViewActivity;
 import com.example.demo.dialog.AlertDialogActivity;
@@ -56,6 +57,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mSwipeRefreshBtn;
     private Button mPopupBtn;
     private Button mDialogBtn;
+    private Button mShapeBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,6 +124,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mDialogBtn = (Button)findViewById(R.id.dialog_btn);
         mDialogBtn.setOnClickListener(this);
+
+        mShapeBtn = (Button)findViewById(R.id.background_btn);
+        mShapeBtn.setOnClickListener(this);
 
     }
 
@@ -226,6 +232,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.dialog_btn:
                 Intent dialogIntent = new Intent(MainActivity.this, AlertDialogActivity.class);
                 startActivity(dialogIntent);
+                break;
+
+            case R.id.background_btn:
+                Intent backgroundIntent = new Intent(MainActivity.this, BackgroundActivity.class);
+                startActivity(backgroundIntent);
                 break;
 
             default:

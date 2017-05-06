@@ -47,7 +47,8 @@
         <activity android:name=".ormlite.OrmLiteActivity" />
         <activity android:name=".swiperefresh.SwipeRefreshActivity" />
         <activity android:name=".popup.PopupActivity" />
-        <activity android:name=".dialog.AlertDialogActivity"></activity>
+        <activity android:name=".dialog.AlertDialogActivity" />
+        <activity android:name=".background.BackgroundActivity"></activity>
     </application>
 
 </manifest>
