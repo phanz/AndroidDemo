@@ -163,5 +163,19 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Selector | layer-list | Shape"/>
+
+        <Button
+            android:id="@+id/surface_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="SurfaceView"/>
+
+        <Button
+            android:id="@+id/canvas_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="Canvas"/>
     </LinearLayout>
 </ScrollView>

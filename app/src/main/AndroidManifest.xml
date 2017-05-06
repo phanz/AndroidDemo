@@ -48,7 +48,9 @@
         <activity android:name=".swiperefresh.SwipeRefreshActivity" />
         <activity android:name=".popup.PopupActivity" />
         <activity android:name=".dialog.AlertDialogActivity" />
-        <activity android:name=".background.BackgroundActivity"></activity>
+        <activity android:name=".background.BackgroundActivity" />
+        <activity android:name=".surfaceview.SurfaceActivity" />
+        <activity android:name=".canvas.CanvasActivity"></activity>
     </application>
 
 </manifest>

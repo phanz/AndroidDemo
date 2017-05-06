@@ -2,6 +2,7 @@ package com.example.demo;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import com.example.demo.aidl.client.BinderClientActivity;
 import com.example.demo.alarmmanager.AlarmManagerActivity;
 import com.example.demo.background.BackgroundActivity;
+import com.example.demo.canvas.CanvasActivity;
 import com.example.demo.compoundbutton.CompoundButtonActivity;
 import com.example.demo.customview.CustomViewActivity;
 import com.example.demo.dialog.AlertDialogActivity;
@@ -30,6 +32,7 @@ import com.example.demo.rxjava.RxJavaActivity;
 import com.example.demo.simpleHScrollView.HScrollViewActivity;
 import com.example.demo.simpleHScrollView2.HScrollView2Activity;
 import com.example.demo.snackbar.SnackBarActivity;
+import com.example.demo.surfaceview.SurfaceActivity;
 import com.example.demo.swiperefresh.SwipeRefreshActivity;
 import com.example.demo.widget.WidgetActivity;
 
@@ -58,7 +61,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mPopupBtn;
     private Button mDialogBtn;
     private Button mShapeBtn;
-
+    private Button mSurfaceViewBtn;
+    private Button mCanvasBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,6 +131,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mShapeBtn = (Button)findViewById(R.id.background_btn);
         mShapeBtn.setOnClickListener(this);
+
+        mSurfaceViewBtn = (Button)findViewById(R.id.surface_view_btn);
+        mSurfaceViewBtn.setOnClickListener(this);
+
+        mCanvasBtn = (Button)findViewById(R.id.canvas_btn);
+        mCanvasBtn.setOnClickListener(this);
 
     }
 
@@ -237,6 +247,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.background_btn:
                 Intent backgroundIntent = new Intent(MainActivity.this, BackgroundActivity.class);
                 startActivity(backgroundIntent);
+                break;
+
+            case R.id.surface_view_btn:
+                Intent surfaceIntent = new Intent(MainActivity.this, SurfaceActivity.class);
+                startActivity(surfaceIntent);
+                break;
+
+            case R.id.canvas_btn:
+                Intent canvasIntent = new Intent(MainActivity.this, CanvasActivity.class);
+                startActivity(canvasIntent);
                 break;
 
             default:
