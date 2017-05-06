@@ -38,109 +38,27 @@ import com.example.demo.widget.WidgetActivity;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    private Button mAidlBtn;
-    private Button mRecyclerBtn;
-    private Button mItemDecoration;
-    private Button mFragmentBtn;
-    private Button mGestureBtn;
-    private Button mCustomViewBtn;
-    private Button mExpandableListViewBtn;
-    private Button mWidgetBtn;
-    private Button mRxJavaBtn;
-    private Button mPermissionBtn;
-    private Button mSnackBar;
-    private Button mCompoundBtn;
-    private Button mHScrollBtn;
-    private Button mHScrollBtn2;
-    private Button mListViewBtn;
-    private Button mAlarmManagerBtn;
-    private Button mOrmLiteBtn;
-    private Button mSwipeRefreshBtn;
-    private Button mPopupBtn;
-    private Button mDialogBtn;
-    private Button mShapeBtn;
-    private Button mSurfaceViewBtn;
-    private Button mCanvasBtn;
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        mAidlBtn = (Button)findViewById(R.id.aidl_btn);
-        mAidlBtn.setOnClickListener(this);
-
-        mRecyclerBtn = (Button)findViewById(R.id.recycler_view_btn);
-        mRecyclerBtn.setOnClickListener(this);
-
-        mItemDecoration = (Button)findViewById(R.id.item_decoration_btn);
-        mItemDecoration.setOnClickListener(this);
-
-        mFragmentBtn = (Button)findViewById(R.id.fragment_btn);
-        mFragmentBtn.setOnClickListener(this);
-
-        mGestureBtn = (Button)findViewById(R.id.gesture_btn);
-        mGestureBtn.setOnClickListener(this);
-
-        mCustomViewBtn = (Button)findViewById(R.id.custom_view_btn);
-        mCustomViewBtn.setOnClickListener(this);
-
-        mExpandableListViewBtn = (Button)findViewById(R.id.expandable_list_view_btn);
-        mExpandableListViewBtn.setOnClickListener(this);
-
-        mWidgetBtn = (Button)findViewById(R.id.widget_btn);
-        mWidgetBtn.setOnClickListener(this);
-
-        mRxJavaBtn = (Button)findViewById(R.id.rxjava_btn);
-        mRxJavaBtn.setOnClickListener(this);
-
-        mPermissionBtn = (Button)findViewById(R.id.permission_btn);
-        mPermissionBtn.setOnClickListener(this);
-
-        mSnackBar = (Button)findViewById(R.id.snack_bar_btn);
-        mSnackBar.setOnClickListener(this);
-
-        mCompoundBtn = (Button)findViewById(R.id.compound_view_btn);
-        mCompoundBtn.setOnClickListener(this);
-
-        mHScrollBtn = (Button)findViewById(R.id.h_scroll_view_btn);
-        mHScrollBtn.setOnClickListener(this);
-
-        mHScrollBtn2 = (Button)findViewById(R.id.h_scroll_view_btn_2);
-        mHScrollBtn2.setOnClickListener(this);
-
-        mListViewBtn = (Button)findViewById(R.id.list_view_btn);
-        mListViewBtn.setOnClickListener(this);
-
-        mAlarmManagerBtn = (Button)findViewById(R.id.alarm_manager_btn);
-        mAlarmManagerBtn.setOnClickListener(this);
-
-        mOrmLiteBtn = (Button)findViewById(R.id.orm_lite_btn);
-        mOrmLiteBtn.setOnClickListener(this);
-
-        mSwipeRefreshBtn = (Button)findViewById(R.id.swipe_refresh_btn);
-        mSwipeRefreshBtn.setOnClickListener(this);
-
-        mPopupBtn = (Button)findViewById(R.id.popup_btn);
-        mPopupBtn.setOnClickListener(this);
-
-        mDialogBtn = (Button)findViewById(R.id.dialog_btn);
-        mDialogBtn.setOnClickListener(this);
-
-        mShapeBtn = (Button)findViewById(R.id.background_btn);
-        mShapeBtn.setOnClickListener(this);
-
-        mSurfaceViewBtn = (Button)findViewById(R.id.surface_view_btn);
-        mSurfaceViewBtn.setOnClickListener(this);
-
-        mCanvasBtn = (Button)findViewById(R.id.canvas_btn);
-        mCanvasBtn.setOnClickListener(this);
-
+        ButterKnife.bind(this);
     }
 
-    @Override
+    @OnClick({R.id.aidl_btn,R.id.recycler_view_btn,R.id.item_decoration_btn,
+            R.id.fragment_btn,R.id.gesture_btn,R.id.custom_view_btn,
+            R.id.expandable_list_view_btn,R.id.widget_btn,R.id.rxjava_btn,
+            R.id.permission_btn,R.id.snack_bar_btn,R.id.compound_view_btn,
+            R.id.h_scroll_view_btn,R.id.h_scroll_view_btn_2,R.id.list_view_btn,
+            R.id.alarm_manager_btn,R.id.orm_lite_btn,R.id.swipe_refresh_btn,
+            R.id.popup_btn,R.id.dialog_btn,R.id.background_btn,
+            R.id.surface_view_btn,R.id.canvas_btn})
     public void onClick(View view) {
         int id = view.getId();
         switch (id){
@@ -262,38 +180,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             default:
                 break;
         }
-    }
-
-    public void shareMsg(String activityTitle, String msgTitle, String msgText,String imgPath) {
-        Intent intent = new Intent(Intent.ACTION_SEND);
-        if (imgPath == null || imgPath.equals("")) {
-            intent.setType("text/plain"); // 纯文本
-        } else {
-            File f = new File(imgPath);
-            if (f != null && f.exists() && f.isFile()) {
-                intent.setType("image/jpg");
-                Uri u = Uri.fromFile(f);
-                intent.putExtra(Intent.EXTRA_STREAM, u);
-            }
-        }
-        intent.putExtra(Intent.EXTRA_SUBJECT, msgTitle);
-        intent.putExtra(Intent.EXTRA_TEXT, msgText);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        startActivity(Intent.createChooser(intent, activityTitle));
-    }
-
-    public void shareSingleImage(String imagePath) {
-        //String imagePath = Environment.getExternalStorageDirectory() + File.separator + "test.jpg";
-        File file = new File(imagePath);
-        long len = file.length();
-        //由文件得到uri
-        Uri imageUri = Uri.fromFile(new File(imagePath));
-        Log.d("share", "uri:" + imageUri);  //输出：file:///storage/emulated/0/test.jpg
-        Intent shareIntent = new Intent();
-        shareIntent.setAction(Intent.ACTION_SEND);
-        shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri);
-        shareIntent.setType("image/*");
-        startActivity(Intent.createChooser(shareIntent, "分享到"));
     }
 
 }
