@@ -14,7 +14,6 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.demo.R;
-import com.example.utils.Utils;
 
 public class PopupActivity extends AppCompatActivity {
 
