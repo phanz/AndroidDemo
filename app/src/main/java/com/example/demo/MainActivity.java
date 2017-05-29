@@ -1,16 +1,9 @@
 package com.example.demo;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.net.Uri;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
 
 import com.example.demo.aidl.client.BinderClientActivity;
 import com.example.demo.alarmmanager.AlarmManagerActivity;
@@ -36,9 +29,6 @@ import com.example.demo.surfaceview.SurfaceActivity;
 import com.example.demo.swiperefresh.SwipeRefreshActivity;
 import com.example.demo.widget.WidgetActivity;
 
-import java.io.File;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
