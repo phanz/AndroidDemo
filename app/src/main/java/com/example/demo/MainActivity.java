@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.widget_btn:
                 Intent widgetIntent = new Intent(MainActivity.this, WidgetActivity.class);
                 startActivity(widgetIntent);
+
                 break;
 
             case R.id.rxjava_btn:
