@@ -11,4 +11,11 @@
     <color name="green">#0f0</color>
     <color name="red">#f00</color>
     <color name="blue">#00f</color>
+
+    <color name="red_base">#FB5B81</color>
+    <color name="text_gray_4">#444444</color>
+    <color name="divider_gray_line">#cccccc</color>
+    <color name="title_bar_blue">#FB5B81</color>
+    <color name="btn_bg_gray">#BDBAB5</color>
+    <color name="bg_light_gray">#F2F2F2</color>
 </resources>

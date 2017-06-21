@@ -51,6 +51,7 @@
         <activity android:name=".background.BackgroundActivity" />
         <activity android:name=".surfaceview.SurfaceActivity" />
         <activity android:name=".canvas.CanvasActivity"></activity>
+        <activity android:name=".viewpager.ViewPagerActivity"></activity>
     </application>
 
 </manifest>

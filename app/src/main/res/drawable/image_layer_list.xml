@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+<layer-mFragmentList xmlns:android="http://schemas.android.com/apk/res/android" >
     <item android:drawable="@drawable/qq_icon"></item><!--图1-->
     <item android:drawable="@drawable/book_icon"></item><!--图2-->
-</layer-list>
+</layer-mFragmentList>

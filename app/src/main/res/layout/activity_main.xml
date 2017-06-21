@@ -3,12 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <LinearLayout
+    <GridLayout
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:columnCount="2"
         tools:context="com.example.demo.MainActivity">
+
+        <Button
+            android:id="@+id/recycler_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="RecyclerView" />
+
+        <Button
+            android:id="@+id/item_decoration_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="ItemDecoration" />
 
         <Button
             android:id="@+id/aidl_btn"
@@ -16,27 +30,6 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Aidl" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/recycler_view_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="RecyclerView" />
-
-            <Button
-                android:id="@+id/item_decoration_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="ItemDecoration" />
-
-        </LinearLayout>
 
         <Button
             android:id="@+id/fragment_btn"
@@ -162,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Selector | layer-list | Shape"/>
+            android:text="Selector | layer-mFragmentList | Shape"/>
 
         <Button
             android:id="@+id/surface_view_btn"
@@ -177,5 +170,12 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Canvas"/>
-    </LinearLayout>
+
+        <Button
+            android:id="@+id/view_pager_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="ViewPager"/>
+    </GridLayout>
 </ScrollView>
