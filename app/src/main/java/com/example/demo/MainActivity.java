@@ -27,6 +27,8 @@ import com.example.demo.simpleHScrollView2.HScrollView2Activity;
 import com.example.demo.snackbar.SnackBarActivity;
 import com.example.demo.surfaceview.SurfaceActivity;
 import com.example.demo.swiperefresh.SwipeRefreshActivity;
+import com.example.demo.video.SurfaceVideoActivity;
+import com.example.demo.video.VideoViewActivity;
 import com.example.demo.viewpager.ViewPagerActivity;
 import com.example.demo.widget.WidgetActivity;
 
@@ -49,7 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.h_scroll_view_btn,R.id.h_scroll_view_btn_2,R.id.list_view_btn,
             R.id.alarm_manager_btn,R.id.orm_lite_btn,R.id.swipe_refresh_btn,
             R.id.popup_btn,R.id.dialog_btn,R.id.background_btn,
-            R.id.surface_view_btn,R.id.canvas_btn,R.id.view_pager_btn})
+            R.id.surface_view_btn,R.id.canvas_btn,R.id.view_pager_btn,
+            R.id.surface_video_btn,R.id.video_view_btn})
     public void onClick(View view) {
         int id = view.getId();
         switch (id){
@@ -172,6 +175,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.view_pager_btn:
                 Intent viewPagerIntent = new Intent(MainActivity.this, ViewPagerActivity.class);
                 startActivity(viewPagerIntent);
+                break;
+
+            case R.id.surface_video_btn:
+                Intent surfaceVideoIntent = new Intent(MainActivity.this, SurfaceVideoActivity.class);
+                startActivity(surfaceVideoIntent);
+                break;
+
+            case R.id.video_view_btn:
+                Intent videoViewIntent = new Intent(MainActivity.this, VideoViewActivity.class);
+                startActivity(videoViewIntent);
                 break;
 
             default:

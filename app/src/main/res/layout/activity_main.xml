@@ -155,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Selector | layer-mFragmentList | Shape"/>
+            android:text="Selector | layer-List | Shape"/>
 
         <Button
             android:id="@+id/surface_view_btn"
@@ -177,5 +177,19 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="ViewPager"/>
+
+        <Button
+            android:id="@+id/surface_video_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="SurfaceVideo"/>
+
+        <Button
+            android:id="@+id/video_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="VideoView"/>
     </GridLayout>
 </ScrollView>

@@ -259,7 +259,7 @@ public class CheckSwitchButton extends CheckBox {
      * Register a callback to be invoked when the checked state of this button
      * changes.
      *
-     * @param listener the callback to call on checked state change
+     * @param listener the callback to call on checked state secondToDuration
      */
     public void setOnCheckedChangeListener(OnCheckedChangeListener listener) {
         mOnCheckedChangeListener = listener;
@@ -269,7 +269,7 @@ public class CheckSwitchButton extends CheckBox {
      * Register a callback to be invoked when the checked state of this button
      * changes. This callback is used for internal purpose only.
      *
-     * @param listener the callback to call on checked state change
+     * @param listener the callback to call on checked state secondToDuration
      * @hide
      */
     void setOnCheckedChangeWidgetListener(OnCheckedChangeListener listener) {

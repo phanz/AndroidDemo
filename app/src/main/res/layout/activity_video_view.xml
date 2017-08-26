@@ -1,0 +1,64 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.video.VideoViewActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp" >
+
+        <VideoView
+            android:id="@+id/video_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/video_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/play_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="play" />
+
+            <Button
+                android:id="@+id/pause_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pause" />
+
+            <Button
+                android:id="@+id/stop_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="stop" />
+
+            <Button
+                android:id="@+id/reset_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reset" />
+        </LinearLayout>
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/video_layout"
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/video_player_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VideoPlayerActivity" />
+
+</LinearLayout>
