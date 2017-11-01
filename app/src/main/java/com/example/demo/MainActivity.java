@@ -17,6 +17,7 @@ import com.example.demo.expandablelistview.ExpandableListViewActivity;
 import com.example.demo.fragment.FragmentActivity;
 import com.example.demo.gesture.SimpleGestureActivity;
 import com.example.demo.listview.ListViewActivity;
+import com.example.demo.notification.NotificationActivity;
 import com.example.demo.ormlite.OrmLiteActivity;
 import com.example.demo.permission.PermissionActivity;
 import com.example.demo.popup.PopupActivity;
@@ -53,7 +54,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             R.id.alarm_manager_btn,R.id.orm_lite_btn,R.id.swipe_refresh_btn,
             R.id.popup_btn,R.id.dialog_btn,R.id.background_btn,
             R.id.surface_view_btn,R.id.canvas_btn,R.id.view_pager_btn,
-            R.id.surface_video_btn,R.id.video_view_btn,R.id.animation_btn})
+            R.id.surface_video_btn,R.id.video_view_btn,R.id.animation_btn,
+            R.id.notification_service_btn})
     public void onClick(View view) {
         int id = view.getId();
         switch (id){
@@ -191,6 +193,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.animation_btn:
                 Intent animationIntent = new Intent(MainActivity.this, AnimationActivity.class);
                 startActivity(animationIntent);
+                break;
+
+            case R.id.notification_service_btn:
+                Intent notificationIntent = new Intent(MainActivity.this, NotificationActivity.class);
+                startActivity(notificationIntent);
                 break;
 
             default:

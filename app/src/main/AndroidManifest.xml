@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".DemoApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -65,7 +66,18 @@
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name=".animation.AnimationActivity"></activity>
+        <activity android:name=".animation.AnimationActivity" />
+
+        <service
+            android:name=".notification.NotificationCollectorService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service android:name=".notification.NotificationCollectorMonitorService" />
+
+        <activity android:name=".notification.NotificationActivity"></activity>
     </application>
 
 </manifest>

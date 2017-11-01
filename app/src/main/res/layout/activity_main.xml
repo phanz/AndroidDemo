@@ -198,5 +198,12 @@
             android:layout_height="wrap_content"
             android:textAllCaps="false"
             android:text="Animation"/>
+
+        <Button
+            android:id="@+id/notification_service_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:text="通知服务"/>
     </GridLayout>
 </ScrollView>
