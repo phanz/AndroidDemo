@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.drawable.BitmapDrawable;
+import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.KeyEvent;
@@ -29,6 +30,15 @@ public class MySurfaceView extends SurfaceView implements Runnable, Callback {
     public MySurfaceView(Context context) {
         super(context);
 
+        mHolder = getHolder(); // 获得SurfaceHolder对象
+        mHolder.addCallback(this); // 为SurfaceView添加状态监听
+        p = new Paint(); // 创建一个画笔对象
+        p.setColor(Color.WHITE); // 设置画笔的颜色为白色
+        setFocusable(true); // 设置焦点
+    }
+
+    public MySurfaceView(Context context, AttributeSet attrs) {
+        super(context, attrs);
         mHolder = getHolder(); // 获得SurfaceHolder对象
         mHolder.addCallback(this); // 为SurfaceView添加状态监听
         p = new Paint(); // 创建一个画笔对象

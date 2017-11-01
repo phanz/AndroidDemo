@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="interpolator_type">
+        <item>BounceInterpolator</item>
+        <item>AccelerateDecelerateInterpolator</item>
+        <item>DecelerateInterpolator</item>
+        <item>AnticipateInterpolator</item>
+        <item>LinearInterpolator</item>
+        <item>LinearOutSlowInInterpolator</item>
+        <item>OvershootInterpolator</item>
+        <item>LinearInterpolator</item>
+    </string-array>
+</resources>
