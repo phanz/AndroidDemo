@@ -9,7 +9,7 @@ import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
 
 public class Encrypt {
-    private static final String KEY = "password_text";
+    private static final String KEY = "password_text";//例： ern#%432b2@s5c89bgD-_54
     private static final String ALGORITHM = "PBEWITHMD5andDES";
     private static byte[] salt = new byte[]{(byte)24, (byte)-121, (byte)-109, (byte)109, (byte)53, (byte)58, (byte)106, (byte)-96};
 

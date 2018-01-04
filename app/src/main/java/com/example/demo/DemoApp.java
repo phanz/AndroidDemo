@@ -9,6 +9,8 @@ import android.os.Handler;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.facebook.stetho.Stetho;
+
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -28,6 +30,7 @@ public class DemoApp extends Application {
     public void onCreate() {
         super.onCreate();
         mContext = this.getApplicationContext();
+        Stetho.initializeWithDefaults(this);
         sIntance = this;
         mHandler = new Handler();
     }
