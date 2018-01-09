@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.demo.background.BackgroundActivity">
+    tools:context="com.example.widgets.picturewidget.video.BackgroundActivity">
 
     <Button
         android:layout_width="wrap_content"

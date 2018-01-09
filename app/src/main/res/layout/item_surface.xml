@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@color/bg_light_gray">
 
-    <com.example.demo.surfaceview.MySurfaceView
+    <com.example.widgets.custom.surfaceview.MySurfaceView
         android:id="@+id/player_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

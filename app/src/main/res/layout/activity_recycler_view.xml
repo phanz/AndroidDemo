@@ -4,7 +4,7 @@
     android:id="@+id/activity_recycler_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.demo.recyclerview.activity.RecyclerViewActivity">
+    tools:context="com.example.widgets.common.recyclerview.activity.RecyclerViewActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

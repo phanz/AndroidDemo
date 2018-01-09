@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.demo.widget.WidgetActivity">
+    tools:context="com.example.widgets.custom.WidgetActivity">
     
-    <com.example.demo.widget.TitleBar
+    <com.example.widgets.custom.TitleBar
         android:id="@+id/title_bar"
         android:layout_width="match_parent"
         android:layout_height="48dp"
@@ -24,12 +24,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"/>
 
-    <com.example.demo.widget.StaticTextPaintView
+    <com.example.widgets.custom.StaticTextPaintView
         android:layout_width="wrap_content"
         android:layout_height="160dp"
         android:layout_marginTop="40dp" />
 
-    <com.example.demo.widget.SwitchButton
+    <com.example.widgets.custom.SwitchButton
         android:id="@+id/switch_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

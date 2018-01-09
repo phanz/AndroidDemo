@@ -5,13 +5,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".DemoApp"
+        android:name="com.example.DemoApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,64 +20,72 @@
         </activity>
 
         <service
-            android:name=".aidl.service.BinderPoolService"
+            android:name="com.example.component.service.aidl.service.BinderPoolService"
             android:enabled="true"
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name=".aidl.client.BinderClientActivity" />
-        <activity android:name=".recyclerview.activity.RecyclerViewActivity" />
-        <activity android:name=".recyclerview.activity.StaggeredGridLayoutActivity" />
-        <activity android:name=".recyclerview.activity.ItemDecorationActivity" />
-        <activity android:name=".fragment.FragmentActivity" />
-        <activity android:name=".gesture.SimpleGestureActivity" />
-        <activity android:name=".customview.CustomViewActivity" />
-        <activity android:name=".expandablelistview.ExpandableListViewActivity" />
-        <activity android:name=".widget.WidgetActivity" />
-        <activity android:name=".rxjava.RxJavaActivity" />
-        <activity android:name=".permission.PermissionActivity" />
-        <activity android:name=".snackbar.SnackBarActivity" />
-        <activity android:name=".compoundbutton.CompoundButtonActivity" />
-        <activity android:name=".simpleHScrollView.HScrollViewActivity" />
-        <activity android:name=".simpleHScrollView2.HScrollView2Activity" />
-        <activity android:name=".listview.ListViewActivity" />
-        <activity android:name=".alarmmanager.AlarmManagerActivity" />
+        <activity android:name="com.example.component.service.aidl.client.BinderClientActivity" />
+        <activity android:name="com.example.widgets.common.recyclerview.activity.RecyclerViewActivity" />
+        <activity android:name="com.example.widgets.common.recyclerview.activity.StaggeredGridLayoutActivity" />
+        <activity android:name="com.example.widgets.common.recyclerview.activity.ItemDecorationActivity" />
+        <activity android:name="com.example.widgets.common.fragment.FragmentActivity" />
+        <activity android:name="com.example.widgets.scroll.gesture.SimpleGestureActivity" />
+        <activity android:name="com.example.widgets.custom.customview.CustomViewActivity" />
+        <activity android:name="com.example.widgets.common.expandablelistview.ExpandableListViewActivity" />
+        <activity android:name="com.example.widgets.custom.WidgetActivity" />
+        <activity android:name="com.example.library.rxjava.RxJavaActivity" />
+        <activity android:name="com.example.security.permission.PermissionActivity" />
+        <activity android:name="com.example.widgets.material.SnackBarActivity" />
+        <activity android:name="com.example.widgets.custom.compoundbutton.CompoundButtonActivity" />
+        <activity android:name="com.example.widgets.custom.simpleHScrollView.HScrollViewActivity" />
+        <activity android:name="com.example.widgets.custom.simpleHScrollView2.HScrollView2Activity" />
+        <activity android:name="com.example.widgets.common.listview.ListViewActivity" />
+        <activity android:name="com.example.system.alarmmanager.AlarmManagerActivity" />
 
-        <service android:name=".alarmmanager.PollingService" />
+        <service android:name="com.example.system.alarmmanager.PollingService" />
 
-        <receiver android:name=".alarmmanager.AlertBroadcastReceiver" />
+        <receiver android:name="com.example.system.alarmmanager.AlertBroadcastReceiver" />
 
-        <activity android:name=".ormlite.OrmLiteActivity" />
-        <activity android:name=".swiperefresh.SwipeRefreshActivity" />
-        <activity android:name=".popup.PopupActivity" />
-        <activity android:name=".dialog.AlertDialogActivity" />
-        <activity android:name=".background.BackgroundActivity" />
-        <activity android:name=".surfaceview.SurfaceActivity" />
-        <activity android:name=".canvas.CanvasActivity" />
-        <activity android:name=".viewpager.ViewPagerActivity" />
+        <activity android:name="com.example.data.local.ormlite.OrmLiteActivity" />
+        <activity android:name="com.example.widgets.common.swiperefresh.SwipeRefreshActivity" />
+        <activity android:name="com.example.widgets.common.CommonWidgetActivity" />
+        <activity android:name="com.example.widgets.picturewidget.video.BackgroundActivity" />
+        <activity android:name="com.example.widgets.custom.surfaceview.SurfaceActivity" />
+        <activity android:name="com.example.widgets.custom.canvas.CanvasActivity" />
+        <activity android:name="com.example.widgets.common.viewpager.ViewPagerActivity" />
         <activity
-            android:name=".video.SurfaceVideoActivity"
+            android:name="com.example.widgets.picturewidget.video.SurfaceVideoActivity"
             android:configChanges="orientation|keyboardHidden"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".video.VideoViewActivity"
+            android:name="com.example.widgets.picturewidget.video.VideoViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name=".animation.AnimationActivity" />
+        <activity android:name="com.example.widgets.scroll.animation.AnimationActivity" />
 
         <service
-            android:name=".notification.NotificationCollectorService"
+            android:name="com.example.system.notification.NotificationCollectorService"
             android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
         </service>
-        <service android:name=".notification.NotificationCollectorMonitorService" />
+        <service android:name="com.example.system.notification.NotificationCollectorMonitorService" />
 
-        <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name="com.example.system.notification.NotificationActivity" />
+        <activity android:name="com.example.component.activity.LifeCycleActivity" />
+        <activity android:name="com.example.component.StudyActivity" />
+
+        <service
+            android:name="com.example.component.service.LifeCycleService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name="com.example.widgets.scroll.ScrollActivity"></activity>
     </application>
 
 </manifest>

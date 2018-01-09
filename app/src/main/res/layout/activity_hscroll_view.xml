@@ -20,7 +20,7 @@
             android:src="@drawable/a" />
     </FrameLayout>
 
-    <com.example.demo.simpleHScrollView.MyHorizontalScrollView
+    <com.example.widgets.custom.simpleHScrollView.MyHorizontalScrollView
         android:id="@+id/id_horizontalScrollView"
         android:layout_width="wrap_content"
         android:layout_height="150dp"
@@ -36,5 +36,5 @@
             android:layout_gravity="center_vertical"
             android:orientation="horizontal" >
         </LinearLayout>
-    </com.example.demo.simpleHScrollView.MyHorizontalScrollView>
+    </com.example.widgets.custom.simpleHScrollView.MyHorizontalScrollView>
 </LinearLayout>

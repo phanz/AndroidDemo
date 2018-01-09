@@ -4,7 +4,7 @@
     android:id="@+id/activity_item_decoration"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.demo.recyclerview.activity.ItemDecorationActivity">
+    tools:context="com.example.widgets.common.recyclerview.activity.ItemDecorationActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"

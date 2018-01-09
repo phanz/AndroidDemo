@@ -4,7 +4,7 @@
     android:id="@+id/activity_expandable_list_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.demo.expandablelistview.ExpandableListViewActivity">
+    tools:context="com.example.widgets.common.expandablelistview.ExpandableListViewActivity">
 
     <ExpandableListView android:id="@+id/expandable_list"
         android:layout_width="match_parent"
