@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <string-array name="interpolator_type">
         <item>BounceInterpolator</item>
@@ -11,4 +11,5 @@
         <item>OvershootInterpolator</item>
         <item>LinearInterpolator</item>
     </string-array>
+
 </resources>

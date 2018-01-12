@@ -1,42 +1,64 @@
-package com.example.component.service.aidl.client;
+package com.example.component;
 
+import android.content.Intent;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
+import com.example.component.activity.LifeCycleActivity;
+import com.example.component.service.LifeCycleService;
+import com.example.component.service.aidl.bean.Book;
+import com.example.component.service.aidl.binder.BinderPoolImpl;
+import com.example.component.service.aidl.client.BinderClient;
+import com.example.component.service.aidl.service.BinderPoolService;
 import com.example.demo.IBookManager;
 import com.example.demo.ICompute;
 import com.example.demo.R;
-import com.example.component.service.aidl.bean.Book;
-import com.example.component.service.aidl.binder.BinderPoolImpl;
 
 import java.util.List;
 
-public class BinderClientActivity extends AppCompatActivity {
-    public final String TAG = this.getClass().getSimpleName();
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    private Button mBindBtn;
+public class ComponentActivity extends AppCompatActivity {
+    public static final String TAG = "ComponentActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_binder_client);
-        mBindBtn = (Button)findViewById(R.id.bind_btn);
+        setContentView(R.layout.activity_study);
+        ButterKnife.bind(this);
+        startService(new Intent(this, BinderPoolService.class));
+    }
 
-        mBindBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+    @OnClick({R.id.activity_cycle_btn,R.id.service_bind_btn,R.id.service_cycle_btn})
+    public void onClick(View view){
+        int id = view.getId();
+        switch (id){
+            case R.id.activity_cycle_btn:
+                Intent intent = new Intent(this,LifeCycleActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.service_bind_btn:
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
                         doWork();
                     }
                 }).start();
-            }
-        });
+                break;
+
+            case R.id.service_cycle_btn:
+                startService(new Intent(this, LifeCycleService.class));
+                break;
+
+            default:
+                break;
+        }
     }
 
     private void doWork(){

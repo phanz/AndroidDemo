@@ -3,6 +3,7 @@ package com.example.data.local.ormlite;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.model.User;
 import com.j256.ormlite.dao.Dao;
 
 import java.sql.SQLException;

@@ -1,14 +1,22 @@
 package com.example;
 
+import android.app.DownloadManager;
+import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
-import com.example.component.StudyActivity;
-import com.example.data.local.ormlite.OrmLiteActivity;
+import com.example.component.ComponentActivity;
+import com.example.data.NetDataActivity;
 import com.example.demo.R;
-import com.example.system.alarmmanager.AlarmManagerActivity;
+import com.example.library.map.MapActivity;
+import com.example.library.rxjava.RxJavaActivity;
+import com.example.system.DownloadTask;
+import com.example.task.TaskActivity;
 import com.example.system.notification.NotificationActivity;
 import com.example.widgets.common.CommonWidgetActivity;
 import com.example.widgets.custom.WidgetActivity;
@@ -16,12 +24,15 @@ import com.example.widgets.picturewidget.video.BackgroundActivity;
 import com.example.widgets.picturewidget.video.SurfaceVideoActivity;
 import com.example.widgets.picturewidget.video.VideoViewActivity;
 import com.example.widgets.scroll.ScrollActivity;
-import com.example.widgets.scroll.animation.AnimationActivity;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+    public static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,41 +41,34 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({ R.id.activity_btn,R.id.service_btn,R.id.provider_btn,R.id.broadcast_btn })
-    public void onComponentClick(View view){
-        int id = view.getId();
-        Intent intent = null;
-        switch (id){
-            case R.id.activity_btn:
-                intent = new Intent(this,StudyActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.service_btn:
-
-                break;
-            case R.id.provider_btn:
-
-                break;
-            case R.id.broadcast_btn:
-
-                break;
-            default:
-                break;
-        }
-
-    }
-
-    @OnClick({ R.id.common_widget_btn,R.id.material_design_btn})
+    @OnClick({ R.id.activity_btn,R.id.common_widget_btn,R.id.material_design_btn,R.id.bitmap_btn,
+            R.id.sound_btn,R.id.video_btn})
     public void onBuildInWidgetClick(View view){
         int id = view.getId();
         Intent intent = null;
         switch (id){
+            case R.id.activity_btn:
+                intent = new Intent(this,ComponentActivity.class);
+                startActivity(intent);
+                break;
             case R.id.common_widget_btn:
                 intent = new Intent(this, CommonWidgetActivity.class);
                 startActivity(intent);
                 break;
             case R.id.material_design_btn:
 
+                break;
+            case R.id.bitmap_btn:
+                intent = new Intent(this, BackgroundActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.sound_btn:
+                intent = new Intent(this, VideoViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.video_btn:
+                intent = new Intent(this, SurfaceVideoActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
@@ -89,47 +93,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @OnClick({ R.id.bitmap_btn,R.id.sound_btn,R.id.video_btn })
-    public void onPictureWidgetClick(View view){
-        int id = view.getId();
-        Intent intent = null;
-        switch (id){
-            case R.id.bitmap_btn:
-                intent = new Intent(this, BackgroundActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.sound_btn:
-                intent = new Intent(this, VideoViewActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.video_btn:
-                intent = new Intent(this, SurfaceVideoActivity.class);
-                startActivity(intent);
-                break;
-            default:
-                break;
-        }
-    }
-
-    @OnClick({ R.id.http_btn,R.id.database_btn,R.id.thread_btn,R.id.schedule_btn })
+    @OnClick({ R.id.net_data_btn,R.id.task_btn })
     public void onDataManagerClick(View view){
         int id = view.getId();
         Intent intent = null;
         switch (id){
-            case R.id.http_btn:
-
-                break;
-            case R.id.database_btn:
-                intent = new Intent(this, OrmLiteActivity.class);
+            case R.id.net_data_btn:
+                intent = new Intent(this, NetDataActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.thread_btn:
-
-                break;
-            case R.id.schedule_btn:
-                intent = new Intent(this, AlarmManagerActivity.class);
+            case R.id.task_btn:
+                intent = new Intent(this, TaskActivity.class);
                 startActivity(intent);
                 break;
+
             default:
                 break;
         }
@@ -146,25 +123,32 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.download_btn:
-
+                String url = "http://ucdl.25pp.com/fs08/2017/01/20/2/2_87a290b5f041a8b512f0bc51595f839a.apk";
+                DownloadTask.downloadTest(this,url);
                 break;
             default:
                 break;
         }
     }
 
-    @OnClick({ R.id.qr_code_btn,R.id.map_btn,R.id.chart_btn })
+    @OnClick({ R.id.qr_code_btn,R.id.map_btn,R.id.chart_btn,R.id.rx_java_btn })
     public void onOpenLibraryClick(View view){
         int id = view.getId();
+        Intent intent = null;
         switch (id){
             case R.id.qr_code_btn:
 
                 break;
             case R.id.map_btn:
-
+                intent = new Intent(this, MapActivity.class);
+                startActivity(intent);
                 break;
             case R.id.chart_btn:
 
+                break;
+            case R.id.rx_java_btn:
+                intent = new Intent(this, RxJavaActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
@@ -206,5 +190,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
 }

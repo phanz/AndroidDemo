@@ -1,22 +1,28 @@
-package com.example.data.local.ormlite;
+package com.example.model;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
-import java.io.Serializable;
-
-
 /**
- * Created by wenhui02.liu on 2017/5/24.
+ * Created by phanz on 2017/3/5.
  */
-@DatabaseTable(tableName = "student")
-public class Student implements Serializable{
+
+@DatabaseTable(tableName = "user")
+public class User {
     @DatabaseField(generatedId = true)
     private int id;
     @DatabaseField(columnName = "name")
     private String name;
     @DatabaseField(columnName = "desc")
     private String desc;
+
+    public User() {
+    }
+
+    public User(String name, String desc) {
+        this.name = name;
+        this.desc = desc;
+    }
 
     public int getId() {
         return id;

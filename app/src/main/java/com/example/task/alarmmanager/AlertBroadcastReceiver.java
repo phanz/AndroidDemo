@@ -1,4 +1,4 @@
-package com.example.system.alarmmanager;
+package com.example.task.alarmmanager;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

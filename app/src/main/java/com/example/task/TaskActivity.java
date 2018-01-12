@@ -1,35 +1,29 @@
-package com.example.system.alarmmanager;
+package com.example.task;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import com.example.demo.R;
+import com.example.task.alarmmanager.AlertBroadcastReceiver;
+import com.example.task.alarmmanager.PollingService;
+import com.example.task.alarmmanager.PollingUtils;
 
-public class AlarmManagerActivity extends AppCompatActivity implements View.OnClickListener{
+import butterknife.OnClick;
 
-    private Button mStartServicePollBtn;
-    private Button mStopServicePollBtn;
-    private Button mStartBroadcastPollBtn;
-    private Button mStopBroadcastPollBtn;
+public class TaskActivity extends AppCompatActivity {
+    public static final String TAG = "TaskActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_alarm_manager);
-
-        mStartServicePollBtn = (Button)findViewById(R.id.start_poll_service_btn);
-        mStopServicePollBtn = (Button)findViewById(R.id.stop_poll_service_btn);
-        mStartBroadcastPollBtn = (Button)findViewById(R.id.start_poll_broad_cast_btn);
-        mStopBroadcastPollBtn = (Button)findViewById(R.id.stop_poll_broad_cast_btn);
-
-        mStartServicePollBtn.setOnClickListener(this);
-        mStopServicePollBtn.setOnClickListener(this);
-        mStartBroadcastPollBtn.setOnClickListener(this);
-        mStopBroadcastPollBtn.setOnClickListener(this);
+        setContentView(R.layout.activity_task);
     }
 
-    @Override
+    @OnClick({ R.id.start_poll_service_btn,R.id.stop_poll_service_btn,
+            R.id.start_poll_broad_cast_btn,R.id.stop_poll_broad_cast_btn,
+            R.id.job_scheduler_btn,R.id.intent_service_btn,R.id.handler_btn,
+            R.id.async_task_btn,R.id.thread_pool_btn })
     public void onClick(View view) {
         int id = view.getId();
         switch (id){
@@ -47,6 +41,26 @@ public class AlarmManagerActivity extends AppCompatActivity implements View.OnCl
 
             case R.id.stop_poll_broad_cast_btn:
                 PollingUtils.stopPollingBroadcast(this, AlertBroadcastReceiver.class, AlertBroadcastReceiver.ACTION);
+                break;
+
+            case R.id.job_scheduler_btn:
+
+                break;
+
+            case R.id.intent_service_btn:
+
+                break;
+
+            case R.id.handler_btn:
+
+                break;
+
+            case R.id.async_task_btn:
+
+                break;
+
+            case R.id.thread_pool_btn:
+
                 break;
 
             default:

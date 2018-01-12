@@ -23,7 +23,7 @@ import java.lang.reflect.Proxy;
 public class DemoApp extends Application {
     public static final String TAG = "DemoApp";
 
-    private static DemoApp sIntance = null;
+    private static DemoApp sInstance = null;
     private Context mContext;
     private Handler mHandler;
     @Override
@@ -31,7 +31,8 @@ public class DemoApp extends Application {
         super.onCreate();
         mContext = this.getApplicationContext();
         Stetho.initializeWithDefaults(this);
-        sIntance = this;
+        registerActivityLifecycleCallbacks(new ActivityLifecycleListener());
+        sInstance = this;
         mHandler = new Handler();
     }
 
@@ -81,7 +82,7 @@ public class DemoApp extends Application {
     }
 
     public static DemoApp getInstance(){
-        return sIntance;
+        return sInstance;
     }
 
     public Context getContext(){

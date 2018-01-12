@@ -1,4 +1,4 @@
-package com.example.system.alarmmanager;
+package com.example.task.alarmmanager;
 
 import android.app.Service;
 import android.content.Intent;

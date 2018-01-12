@@ -1,11 +1,15 @@
-package com.example.data.local.ormlite;
+package com.example.data;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.example.data.local.ormlite.DatabaseRepository;
 import com.example.demo.R;
+import com.example.model.Contributor;
+import com.example.model.Student;
+import com.example.model.User;
 import com.j256.ormlite.android.AndroidDatabaseConnection;
 
 import java.sql.SQLException;
@@ -15,9 +19,11 @@ import java.util.List;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 
-public class OrmLiteActivity extends AppCompatActivity {
-    public static final String TAG = "OrmLiteActivity";
+public class NetDataActivity extends AppCompatActivity {
+    public static final String TAG = "NetDataActivity";
     private DatabaseRepository repository;
     private List<Student> studentList;
     @Override
@@ -36,7 +42,7 @@ public class OrmLiteActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.create_btn,R.id.insert_btn,R.id.query_btn,R.id.delete_btn,
-        R.id.gen_btn,R.id.orm_list_insert_btn,R.id.transaction_insert_btn})
+        R.id.gen_btn,R.id.orm_list_insert_btn,R.id.transaction_insert_btn,R.id.net_access_btn})
     public void onClick(View view){
         int id = view.getId();
         switch (id){
@@ -64,6 +70,32 @@ public class OrmLiteActivity extends AppCompatActivity {
 
             case R.id.transaction_insert_btn:
                 transactionInsert(studentList);
+                break;
+
+            case R.id.net_access_btn:
+                Repository.getInstance().getGitHubInfo(new Observer<List<Contributor>>() {
+                    @Override
+                    public void onSubscribe(Disposable d) {
+
+                    }
+
+                    @Override
+                    public void onNext(List<Contributor> contributors) {
+                        for (Contributor c : contributors) {
+                            Log.d("TAG", "login:" + c.getLogin() + "  contributions:" + c.getContributions());
+                        }
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onComplete() {
+
+                    }
+                });
                 break;
 
             default:

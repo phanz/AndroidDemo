@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.system.alarmmanager.AlarmManagerActivity">
+    tools:context="com.example.task.TaskActivity">
 
     <Button
         android:id="@+id/start_poll_service_btn"
@@ -34,4 +34,39 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="关闭广播定时器"/>
+
+    <Button
+        android:id="@+id/job_scheduler_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="JobScheduler"/>
+
+    <Button
+        android:id="@+id/intent_service_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="IntentService"/>
+
+    <Button
+        android:id="@+id/handler_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Handler"/>
+
+    <Button
+        android:id="@+id/async_task_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="AsyncTask"/>
+
+    <Button
+        android:id="@+id/thread_pool_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="ThreadPool"/>
 </LinearLayout>

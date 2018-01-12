@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="四大组件"/>
+            android:text="内置控件"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -23,39 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:text="Activity" />
-
-            <Button
-                android:id="@+id/service_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="Service" />
-
-            <Button
-                android:id="@+id/provider_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="Provider" />
-
-            <Button
-                android:id="@+id/broadcast_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="Broadcast" />
-        </LinearLayout>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="内置控件"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+                android:text="Activity/Service" />
 
             <Button
                 android:id="@+id/common_widget_btn"
@@ -72,36 +40,6 @@
                 android:text="Material Design" />
 
         </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="自定义控件"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <Button
-                android:id="@+id/scroll_animation_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="滑动、手势、动画" />
-
-            <Button
-                android:id="@+id/custom_view_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="自定义控件" />
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="图片、音频、视频"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -132,6 +70,31 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="自定义控件"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/scroll_animation_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="滑动、手势、动画" />
+
+            <Button
+                android:id="@+id/custom_view_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="自定义控件" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="数据获取及处理"/>
 
         <LinearLayout
@@ -139,32 +102,25 @@
             android:layout_height="wrap_content">
 
             <Button
-                android:id="@+id/http_btn"
+                android:id="@+id/net_data_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:text="网络" />
+                android:text="网络和数据库" />
 
             <Button
-                android:id="@+id/database_btn"
+                android:id="@+id/content_provider_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:text="数据库" />
+                android:text="ContentProvider" />
 
             <Button
-                android:id="@+id/thread_btn"
+                android:id="@+id/task_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:text="多线程" />
-
-            <Button
-                android:id="@+id/schedule_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="定时任务" />
+                android:text="任务化" />
         </LinearLayout>
 
         <TextView
@@ -221,6 +177,13 @@
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
                 android:text="图表绘制" />
+
+            <Button
+                android:id="@+id/rx_java_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="RxJava" />
 
         </LinearLayout>
 

@@ -3,6 +3,8 @@
     package="com.example.demo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name="com.example.DemoApp"
@@ -25,7 +27,6 @@
             android:exported="true"
             android:process=":remote" />
 
-        <activity android:name="com.example.component.service.aidl.client.BinderClientActivity" />
         <activity android:name="com.example.widgets.common.recyclerview.activity.RecyclerViewActivity" />
         <activity android:name="com.example.widgets.common.recyclerview.activity.StaggeredGridLayoutActivity" />
         <activity android:name="com.example.widgets.common.recyclerview.activity.ItemDecorationActivity" />
@@ -34,20 +35,19 @@
         <activity android:name="com.example.widgets.custom.customview.CustomViewActivity" />
         <activity android:name="com.example.widgets.common.expandablelistview.ExpandableListViewActivity" />
         <activity android:name="com.example.widgets.custom.WidgetActivity" />
-        <activity android:name="com.example.library.rxjava.RxJavaActivity" />
         <activity android:name="com.example.security.permission.PermissionActivity" />
         <activity android:name="com.example.widgets.material.SnackBarActivity" />
         <activity android:name="com.example.widgets.custom.compoundbutton.CompoundButtonActivity" />
         <activity android:name="com.example.widgets.custom.simpleHScrollView.HScrollViewActivity" />
         <activity android:name="com.example.widgets.custom.simpleHScrollView2.HScrollView2Activity" />
         <activity android:name="com.example.widgets.common.listview.ListViewActivity" />
-        <activity android:name="com.example.system.alarmmanager.AlarmManagerActivity" />
+        <activity android:name="com.example.task.TaskActivity" />
 
-        <service android:name="com.example.system.alarmmanager.PollingService" />
+        <service android:name="com.example.task.alarmmanager.PollingService" />
 
-        <receiver android:name="com.example.system.alarmmanager.AlertBroadcastReceiver" />
+        <receiver android:name="com.example.task.alarmmanager.AlertBroadcastReceiver" />
 
-        <activity android:name="com.example.data.local.ormlite.OrmLiteActivity" />
+        <activity android:name="com.example.data.NetDataActivity" />
         <activity android:name="com.example.widgets.common.swiperefresh.SwipeRefreshActivity" />
         <activity android:name="com.example.widgets.common.CommonWidgetActivity" />
         <activity android:name="com.example.widgets.picturewidget.video.BackgroundActivity" />
@@ -78,14 +78,16 @@
 
         <activity android:name="com.example.system.notification.NotificationActivity" />
         <activity android:name="com.example.component.activity.LifeCycleActivity" />
-        <activity android:name="com.example.component.StudyActivity" />
+        <activity android:name="com.example.component.ComponentActivity" />
 
         <service
             android:name="com.example.component.service.LifeCycleService"
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.example.widgets.scroll.ScrollActivity"></activity>
+        <activity android:name="com.example.widgets.scroll.ScrollActivity" />
+        <activity android:name="com.example.library.map.MapActivity" />
+        <activity android:name="com.example.library.rxjava.RxJavaActivity"></activity>
     </application>
 
 </manifest>
