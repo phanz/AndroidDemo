@@ -1,13 +1,8 @@
 package com.example;
 
-import android.app.DownloadManager;
-import android.content.Context;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.Bundle;
-import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 
 import com.example.component.ComponentActivity;
@@ -15,6 +10,8 @@ import com.example.data.NetDataActivity;
 import com.example.demo.R;
 import com.example.library.chart.ChartActivity;
 import com.example.library.map.MapActivity;
+import com.example.library.qrcode.CaptureActivity;
+import com.example.library.qrcode.QrCodeActivity;
 import com.example.library.rxjava.RxJavaActivity;
 import com.example.system.DownloadTask;
 import com.example.task.TaskActivity;
@@ -25,9 +22,6 @@ import com.example.widgets.picturewidget.video.BackgroundActivity;
 import com.example.widgets.picturewidget.video.SurfaceVideoActivity;
 import com.example.widgets.picturewidget.video.VideoViewActivity;
 import com.example.widgets.scroll.ScrollActivity;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -138,7 +132,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = null;
         switch (id){
             case R.id.qr_code_btn:
-
+                intent = new Intent(this, QrCodeActivity.class);
+                startActivity(intent);
                 break;
             case R.id.map_btn:
                 intent = new Intent(this, MapActivity.class);

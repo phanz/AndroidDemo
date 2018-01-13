@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:name="com.example.DemoApp"
@@ -88,7 +89,9 @@
         <activity android:name="com.example.widgets.scroll.ScrollActivity" />
         <activity android:name="com.example.library.map.MapActivity" />
         <activity android:name="com.example.library.rxjava.RxJavaActivity" />
-        <activity android:name="com.example.library.chart.ChartActivity"></activity>
+        <activity android:name="com.example.library.chart.ChartActivity" />
+        <activity android:name="com.example.library.qrcode.CaptureActivity" />
+        <activity android:name="com.example.library.qrcode.QrCodeActivity"></activity>
     </application>
 
 </manifest>
