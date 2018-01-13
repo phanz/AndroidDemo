@@ -3,6 +3,7 @@
     package="com.example.demo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -95,6 +96,10 @@
         <provider
             android:authorities="MyProvider"
             android:name="com.example.data.local.provider.MyProvider"/>
+
+        <service android:name="com.example.task.MyJobService"
+                    android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <service android:name="com.example.task.MyIntentService" />
     </application>
 
 </manifest>
