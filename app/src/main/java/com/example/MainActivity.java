@@ -13,6 +13,7 @@ import android.view.View;
 import com.example.component.ComponentActivity;
 import com.example.data.NetDataActivity;
 import com.example.demo.R;
+import com.example.library.chart.ChartActivity;
 import com.example.library.map.MapActivity;
 import com.example.library.rxjava.RxJavaActivity;
 import com.example.system.DownloadTask;
@@ -144,7 +145,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.chart_btn:
-
+                intent = new Intent(this, ChartActivity.class);
+                startActivity(intent);
                 break;
             case R.id.rx_java_btn:
                 intent = new Intent(this, RxJavaActivity.class);
