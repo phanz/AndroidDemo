@@ -92,6 +92,9 @@
         <activity android:name="com.example.library.chart.ChartActivity" />
         <activity android:name="com.example.library.qrcode.CaptureActivity" />
         <activity android:name="com.example.library.qrcode.QrCodeActivity"></activity>
+        <provider
+            android:authorities="MyProvider"
+            android:name="com.example.data.local.provider.MyProvider"/>
     </application>
 
 </manifest>

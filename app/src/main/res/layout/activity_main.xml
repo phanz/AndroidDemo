@@ -109,13 +109,6 @@
                 android:text="网络和数据库" />
 
             <Button
-                android:id="@+id/content_provider_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAllCaps="false"
-                android:text="ContentProvider" />
-
-            <Button
                 android:id="@+id/task_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
