@@ -7,8 +7,6 @@ import android.support.test.runner.AndroidJUnit4;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.example.MainActivity;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

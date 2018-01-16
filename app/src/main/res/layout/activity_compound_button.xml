@@ -9,13 +9,26 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:orientation="vertical"
-    tools:context="com.example.widgets.custom.compoundbutton.CompoundButtonActivity">
+    tools:context="com.example.ui.widgets.custom.compoundbutton.CompoundButtonActivity">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="切换按钮效果实现"
         android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:text="自定义SwitchButton" />
+
+    <com.example.ui.widgets.custom.SwitchButton
+        android:id="@+id/switch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_marginTop="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -69,7 +82,7 @@
         android:layout_marginTop="10dip"
         android:text="自定义CheckBox实现(enable=true)：" />
 
-    <com.example.widgets.custom.compoundbutton.view.CheckSwitchButton
+    <com.example.ui.widgets.custom.compoundbutton.view.CheckSwitchButton
         android:id="@+id/mCheckSwithcButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -82,7 +95,7 @@
         android:layout_marginTop="10dip"
         android:text="根据上面的开关改变   enable 属性：" />
 
-    <com.example.widgets.custom.compoundbutton.view.CheckSwitchButton
+    <com.example.ui.widgets.custom.compoundbutton.view.CheckSwitchButton
         android:id="@+id/mEnableCheckSwithcButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -94,7 +107,7 @@
         android:layout_marginTop="10dip"
         android:text="自定义CompoundButton实现：" />
 
-    <com.example.widgets.custom.compoundbutton.view.SwitchButton
+    <com.example.ui.widgets.custom.compoundbutton.view.SwitchButton
         style="@style/Switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -108,7 +121,7 @@
         android:layout_marginTop="10dip"
         android:text="自定义View实现：" />
 
-    <com.example.widgets.custom.compoundbutton.view.SlideSwitchView
+    <com.example.ui.widgets.custom.compoundbutton.view.SlideSwitchView
         android:id="@+id/mSlideSwitchView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

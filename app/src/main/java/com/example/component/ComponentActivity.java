@@ -29,7 +29,7 @@ public class ComponentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_study);
+        setContentView(R.layout.activity_component);
         ButterKnife.bind(this);
         startService(new Intent(this, BinderPoolService.class));
     }
