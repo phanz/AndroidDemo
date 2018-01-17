@@ -8,11 +8,32 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="我是备用Fragment"/>
+        android:text="Fragment通信Demo"/>
 
     <Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="返回"/>
+
+    <Button
+        android:id="@+id/fragment_dialog_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Fragment Dialog通信"/>
+
+    <Button
+        android:id="@+id/fragment_communicate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="不同Activity内的Fragment通信"/>
+
+    <Button
+        android:id="@+id/fragment_stack_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Activity内的Fragment栈"/>
 </LinearLayout>

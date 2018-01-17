@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ui.fragment.communicate.ResultFragment">
+
+    <EditText
+        android:id="@+id/result_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="输入要返回的内容"/>
+
+    <Button
+        android:id="@+id/back_fragment_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="返回"/>
+
+</LinearLayout>

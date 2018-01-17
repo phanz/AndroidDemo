@@ -15,7 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.demo.R;
-import com.example.ui.fragment.ShowFragment;
+import com.example.ui.fragment.PresentFragment;
 import com.example.ui.fragment.DemoFragment;
 import com.example.ui.fragment.OthersFragment;
 
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity
         mMeImage = findViewById(R.id.others_bottom_view);
 
         mHealthFragment = new DemoFragment();
-        mDeviceFragment = new ShowFragment();
+        mDeviceFragment = new PresentFragment();
         mMeFragment = new OthersFragment();
 
         mFragmentNow = null;

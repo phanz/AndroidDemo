@@ -15,8 +15,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name="com.example.MainActivity"
+        <activity
+            android:name="com.example.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -90,14 +90,19 @@
         <activity android:name="com.example.library.rxjava.RxJavaActivity" />
         <activity android:name="com.example.library.chart.ChartActivity" />
         <activity android:name="com.example.library.qrcode.CaptureActivity" />
-        <activity android:name="com.example.library.qrcode.QrCodeActivity"></activity>
-        <provider
-            android:authorities="MyProvider"
-            android:name="com.example.data.local.provider.MyProvider"/>
+        <activity android:name="com.example.library.qrcode.QrCodeActivity" />
 
-        <service android:name="com.example.task.MyJobService"
-                    android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <provider
+            android:name="com.example.data.local.provider.MyProvider"
+            android:authorities="MyProvider" />
+
+        <service
+            android:name="com.example.task.MyJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
         <service android:name="com.example.task.MyIntentService" />
+
+        <activity android:name="com.example.ui.fragment.communicate.ResultFragmentActivity" />
+        <activity android:name="com.example.ui.fragment.communicate.StackFragmentActivity"></activity>
     </application>
 
 </manifest>

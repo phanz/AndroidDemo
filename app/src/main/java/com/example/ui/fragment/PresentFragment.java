@@ -1,7 +1,5 @@
 package com.example.ui.fragment;
 
-
-
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,9 +9,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.component.ComponentActivity;
 import com.example.demo.R;
+import com.example.ui.fragment.communicate.ReplaceFragment;
+import com.example.ui.fragment.pager.BasePagerFragment;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -22,8 +23,8 @@ import butterknife.OnClick;
  * Created by hanzai.peng on 2017/3/17.
  */
 
-public class ShowFragment extends Fragment {
-    public static final String TAG = ShowFragment.class.getSimpleName();
+public class PresentFragment extends Fragment {
+    public static final String TAG = PresentFragment.class.getSimpleName();
 
     @Override
     public void onAttach(Context context) {
@@ -35,6 +36,11 @@ public class ShowFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.d(TAG, "onCreate: ");
+        Bundle bundle = getArguments();
+        if(bundle != null){   //接收从Activity传来的消息
+            String data = bundle.getString("key");
+            Log.d(TAG, "Fragment从源Activity中获取数据: "+data);
+        }
     }
 
     @Nullable
@@ -53,18 +59,12 @@ public class ShowFragment extends Fragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-        Log.d(TAG, "onResume: ");
-    }
-
-    @Override
     public void onStart() {
         super.onStart();
         Log.d(TAG, "onStart: ");
     }
 
-    @OnClick({ R.id.component_btn })
+    @OnClick({ R.id.component_btn,R.id.replace })
     public void onClick(View view){
         int id = view.getId();
         Intent intent = null;
@@ -74,9 +74,27 @@ public class ShowFragment extends Fragment {
                 startActivity(intent);
                 break;
 
+            case R.id.replace:
+                Toast.makeText(getActivity(),"replace",Toast.LENGTH_SHORT).show();
+                BasePagerFragment replaceFragment = new ReplaceFragment();
+                Bundle bundle = new Bundle();
+                bundle.putString("DATA","Hello");
+                replaceFragment.setArguments(bundle);
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fl_content,replaceFragment)
+                        .commit();
+                break;
+
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        Log.d(TAG, "onResume: ");
     }
 
     @Override
