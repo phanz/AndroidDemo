@@ -1,4 +1,4 @@
-package com.example.component.service.aidl.bean;
+package com.example.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -10,6 +10,8 @@ import android.os.Parcelable;
 public class Book implements Parcelable{
     private String name;
     private int price;
+
+    public Book(){}
 
     protected Book(Parcel in) {
         name = in.readString();

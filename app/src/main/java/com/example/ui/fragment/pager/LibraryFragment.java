@@ -66,6 +66,11 @@ public class LibraryFragment extends BasePagerFragment {
                 intent = new Intent(getActivity(), RxJavaActivity.class);
                 startActivity(intent);
                 break;
+
+            case R.id.glide_btn:
+                //intent = new Intent(getActivity(), .class);
+                //startActivity(intent);
+                break;
             default:
                 break;
         }

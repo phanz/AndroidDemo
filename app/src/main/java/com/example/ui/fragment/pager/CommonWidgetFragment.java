@@ -23,11 +23,11 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.demo.R;
-import com.example.ui.widgets.common.listview.ListViewActivity;
-import com.example.ui.widgets.common.recyclerview.activity.RecyclerViewActivity;
 import com.example.ui.widgets.common.BackgroundActivity;
 import com.example.ui.widgets.common.VideoViewActivity;
-import com.example.ui.widgets.material.SnackBarActivity;
+import com.example.ui.widgets.common.listview.ListViewActivity;
+import com.example.ui.widgets.common.recyclerview.activity.ItemDecorationActivity;
+import com.example.ui.widgets.common.recyclerview.activity.RecyclerViewActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -62,7 +62,7 @@ public class CommonWidgetFragment extends BasePagerFragment {
     }
 
     @OnClick({ R.id.dialog_show_btn,R.id.popup_show_btn, R.id.list_view_btn,R.id.recycler_view_btn,
-            R.id.drawable_btn,R.id.video_btn,R.id.material_btn})
+            R.id.item_decoration_btn,R.id.drawable_btn,R.id.video_btn})
     public void onClick(View view){
         int id = view.getId();
         Intent intent = null;
@@ -85,6 +85,11 @@ public class CommonWidgetFragment extends BasePagerFragment {
                 startActivity(intent);
                 break;
 
+            case R.id.item_decoration_btn:
+                intent = new Intent(getActivity(), ItemDecorationActivity.class);
+                startActivity(intent);
+                break;
+
             case R.id.drawable_btn:
                 intent = new Intent(getActivity(), BackgroundActivity.class);
                 startActivity(intent);
@@ -92,11 +97,6 @@ public class CommonWidgetFragment extends BasePagerFragment {
 
             case R.id.video_btn:
                 intent = new Intent(getActivity(), VideoViewActivity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.material_btn:
-                intent = new Intent(getActivity(), SnackBarActivity.class);
                 startActivity(intent);
                 break;
 

@@ -1,59 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.ui.widgets.custom.viewgroup.FlowLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_widget"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.example.ui.widgets.custom.RichTextActivity">
-    
 
     <Button
         android:id="@+id/picture_text_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="图文混排"/>
 
     <Button
         android:id="@+id/canvas_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Canvas"/>
 
     <Button
         android:id="@+id/compound_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Compound Btn"/>
 
     <Button
         android:id="@+id/custom_view_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Custom View"/>
 
     <Button
         android:id="@+id/h_scroll_view_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="HScrollView"/>
 
     <Button
         android:id="@+id/h_scroll_view2_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="HScrollView2"/>
 
     <Button
         android:id="@+id/surface_view_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Surface View"/>
 
     <Button
-        android:id="@+id/scroll_btn"
+        android:id="@+id/animation_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="滑动"/>
+        android:textAllCaps="false"
+        android:text="Animation"/>
 
-</LinearLayout>
+    <Button
+        android:id="@+id/gesture_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Gesture"/>
+
+    <Button
+        android:id="@+id/touch_event_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="TouchEvent"/>
+
+</com.example.ui.widgets.custom.viewgroup.FlowLayout>

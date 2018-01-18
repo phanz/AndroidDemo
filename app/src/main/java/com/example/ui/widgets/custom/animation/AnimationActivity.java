@@ -1,4 +1,4 @@
-package com.example.ui.widgets.scroll.animation;
+package com.example.ui.widgets.custom.animation;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

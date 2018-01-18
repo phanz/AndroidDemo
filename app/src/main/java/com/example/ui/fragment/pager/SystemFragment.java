@@ -8,10 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.demo.R;
-import com.example.library.chart.ChartActivity;
-import com.example.library.map.MapActivity;
-import com.example.library.qrcode.QrCodeActivity;
-import com.example.library.rxjava.RxJavaActivity;
 import com.example.system.DownloadTask;
 import com.example.system.notification.NotificationActivity;
 

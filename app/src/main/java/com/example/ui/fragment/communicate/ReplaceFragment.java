@@ -67,10 +67,12 @@ public class ReplaceFragment extends BasePagerFragment {
         switch (id){
             case R.id.back:
                 Toast.makeText(getActivity(),"返回",Toast.LENGTH_SHORT).show();
-                getFragmentManager()
+                /*getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fl_content,new PresentFragment())
-                        .commit();
+                        .commit();*/
+
+                getFragmentManager().popBackStack();
                 break;
 
             case R.id.fragment_dialog_btn:

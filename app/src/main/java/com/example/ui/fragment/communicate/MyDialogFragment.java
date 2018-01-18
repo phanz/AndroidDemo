@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.DialogFragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,6 +37,9 @@ public class MyDialogFragment extends DialogFragment {
         switch (id){
             case R.id.ok_btn:
                 String input = mInputText.getText().toString();
+                if(TextUtils.isEmpty(input)){
+                    input = "default data";
+                }
                 Intent intent = new Intent();
                 intent.putExtra("DATA",input);
                 getTargetFragment().onActivityResult(ReplaceFragment.REQUEST_DIALOG,

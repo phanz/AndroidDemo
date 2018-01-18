@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.example.ui.widgets.custom.viewgroup.FlowLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -18,4 +19,4 @@
         android:text="下载服务"
         android:textAllCaps="false" />
 
-</LinearLayout>
+</com.example.ui.widgets.custom.viewgroup.FlowLayout>

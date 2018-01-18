@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.component.ComponentActivity;
+import com.example.component.ServiceActivity;
 import com.example.demo.R;
 import com.example.ui.fragment.communicate.ReplaceFragment;
 import com.example.ui.fragment.pager.BasePagerFragment;
@@ -64,13 +66,18 @@ public class PresentFragment extends Fragment {
         Log.d(TAG, "onStart: ");
     }
 
-    @OnClick({ R.id.component_btn,R.id.replace })
+    @OnClick({ R.id.activity_btn,R.id.replace,R.id.service_btn })
     public void onClick(View view){
         int id = view.getId();
         Intent intent = null;
         switch (id){
-            case R.id.component_btn:
+            case R.id.activity_btn:
                 intent = new Intent(getActivity(), ComponentActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.service_btn:
+                intent = new Intent(getActivity(), ServiceActivity.class);
                 startActivity(intent);
                 break;
 
@@ -80,9 +87,15 @@ public class PresentFragment extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("DATA","Hello");
                 replaceFragment.setArguments(bundle);
+                /*getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fl_content,replaceFragment)
+                        .commit();*/
                 getFragmentManager()
                         .beginTransaction()
                         .replace(R.id.fl_content,replaceFragment)
+                        .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
+                        .addToBackStack(null)
                         .commit();
                 break;
 

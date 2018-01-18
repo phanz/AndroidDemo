@@ -1,4 +1,4 @@
-package com.example.ui.widgets.scroll.animation;
+package com.example.ui.widgets.custom.animation;
 
 /**
  * Created by phanz on 2017/9/17.

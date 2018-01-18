@@ -1,4 +1,4 @@
-package com.example.ui.widgets.scroll.animation;
+package com.example.ui.widgets.custom.animation;
 
 import android.animation.AnimatorSet;
 import android.animation.ArgbEvaluator;

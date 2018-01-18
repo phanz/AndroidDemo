@@ -4,6 +4,7 @@ package com.example.ui.fragment.communicate;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +38,9 @@ public class ResultFragment extends Fragment {
         switch (id){
             case R.id.back_fragment_btn:
                 String resultData = mResultInput.getText().toString();
+                if (TextUtils.isEmpty(resultData)) {
+                    resultData = "default data";
+                }
                 Intent intent = new Intent();
                 intent.putExtra("DATA",resultData);
                 getActivity().setResult(ReplaceFragment.REQUEST_ACTIVITY_FRAGMENT,intent);

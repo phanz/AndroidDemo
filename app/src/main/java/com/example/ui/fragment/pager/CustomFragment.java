@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.demo.R;
 import com.example.ui.widgets.custom.RichTextActivity;
@@ -15,7 +16,8 @@ import com.example.ui.widgets.custom.customview.CustomViewActivity;
 import com.example.ui.widgets.custom.simpleHScrollView.HScrollViewActivity;
 import com.example.ui.widgets.custom.simpleHScrollView2.HScrollView2Activity;
 import com.example.ui.widgets.custom.surfaceview.SurfaceActivity;
-import com.example.ui.widgets.scroll.ScrollActivity;
+import com.example.ui.widgets.custom.animation.AnimationActivity;
+import com.example.ui.widgets.custom.gesture.SimpleGestureActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -43,7 +45,8 @@ public class CustomFragment extends BasePagerFragment {
     }
 
     @OnClick({ R.id.picture_text_btn,R.id.canvas_btn,R.id.compound_btn,R.id.custom_view_btn,
-            R.id.h_scroll_view_btn,R.id.h_scroll_view2_btn,R.id.surface_view_btn,R.id.scroll_btn})
+            R.id.h_scroll_view_btn,R.id.h_scroll_view2_btn,R.id.surface_view_btn,
+            R.id.animation_btn,R.id.gesture_btn,R.id.touch_event_btn})
     public void onClick(View view){
         int id = view.getId();
         Intent intent = null;
@@ -83,9 +86,18 @@ public class CustomFragment extends BasePagerFragment {
                 startActivity(intent);
                 break;
 
-            case R.id.scroll_btn:
-                intent = new Intent(getActivity(), ScrollActivity.class);
+            case R.id.animation_btn:
+                intent = new Intent(getActivity(), AnimationActivity.class);
                 startActivity(intent);
+                break;
+
+            case R.id.gesture_btn:
+                intent = new Intent(getActivity(), SimpleGestureActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.touch_event_btn:
+                Toast.makeText(getActivity(),"TouchEvent尚未实现",Toast.LENGTH_SHORT).show();
                 break;
 
             default:

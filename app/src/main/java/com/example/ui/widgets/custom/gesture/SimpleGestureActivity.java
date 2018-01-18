@@ -1,4 +1,4 @@
-package com.example.ui.widgets.scroll.gesture;
+package com.example.ui.widgets.custom.gesture;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

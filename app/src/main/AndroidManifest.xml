@@ -34,7 +34,7 @@
         <activity android:name="com.example.ui.widgets.common.recyclerview.activity.RecyclerViewActivity" />
         <activity android:name="com.example.ui.widgets.common.recyclerview.activity.StaggeredGridLayoutActivity" />
         <activity android:name="com.example.ui.widgets.common.recyclerview.activity.ItemDecorationActivity" />
-        <activity android:name="com.example.ui.widgets.scroll.gesture.SimpleGestureActivity" />
+        <activity android:name="com.example.ui.widgets.custom.gesture.SimpleGestureActivity" />
         <activity android:name="com.example.ui.widgets.custom.customview.CustomViewActivity" />
         <activity android:name="com.example.ui.widgets.common.expandablelistview.ExpandableListViewActivity" />
         <activity android:name="com.example.ui.widgets.custom.RichTextActivity" />
@@ -65,7 +65,7 @@
             android:configChanges="orientation|keyboardHidden"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
-        <activity android:name="com.example.ui.widgets.scroll.animation.AnimationActivity" />
+        <activity android:name="com.example.ui.widgets.custom.animation.AnimationActivity" />
 
         <service
             android:name="com.example.system.notification.NotificationCollectorService"
@@ -85,7 +85,6 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name="com.example.ui.widgets.scroll.ScrollActivity" />
         <activity android:name="com.example.library.map.MapActivity" />
         <activity android:name="com.example.library.rxjava.RxJavaActivity" />
         <activity android:name="com.example.library.chart.ChartActivity" />
@@ -102,7 +101,8 @@
         <service android:name="com.example.task.MyIntentService" />
 
         <activity android:name="com.example.ui.fragment.communicate.ResultFragmentActivity" />
-        <activity android:name="com.example.ui.fragment.communicate.StackFragmentActivity"></activity>
+        <activity android:name="com.example.ui.fragment.communicate.StackFragmentActivity" />
+        <activity android:name="com.example.component.ServiceActivity"></activity>
     </application>
 
 </manifest>

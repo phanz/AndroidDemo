@@ -5,14 +5,23 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/component_btn"
+        android:id="@+id/activity_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="组件"/>
+        android:textAllCaps="false"
+        android:text="Activity"/>
+
+    <Button
+        android:id="@+id/service_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Service"/>
 
     <Button
         android:id="@+id/replace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:text="Fragment通信"/>
 </LinearLayout>
