@@ -36,10 +36,8 @@
         <activity android:name="com.example.ui.widgets.common.recyclerview.activity.ItemDecorationActivity" />
         <activity android:name="com.example.ui.widgets.custom.gesture.SimpleGestureActivity" />
         <activity android:name="com.example.ui.widgets.custom.customview.CustomViewActivity" />
-        <activity android:name="com.example.ui.widgets.common.expandablelistview.ExpandableListViewActivity" />
         <activity android:name="com.example.ui.widgets.custom.RichTextActivity" />
         <activity android:name="com.example.security.permission.PermissionActivity" />
-        <activity android:name="com.example.ui.widgets.material.SnackBarActivity" />
         <activity android:name="com.example.ui.widgets.custom.compoundbutton.CompoundButtonActivity" />
         <activity android:name="com.example.ui.widgets.custom.simpleHScrollView.HScrollViewActivity" />
         <activity android:name="com.example.ui.widgets.custom.simpleHScrollView2.HScrollView2Activity" />
@@ -49,11 +47,9 @@
 
         <receiver android:name="com.example.task.alarmmanager.AlertBroadcastReceiver" />
 
-        <activity android:name="com.example.ui.widgets.common.swiperefresh.SwipeRefreshActivity" />
         <activity android:name="com.example.ui.widgets.common.BackgroundActivity" />
         <activity android:name="com.example.ui.widgets.custom.surfaceview.SurfaceActivity" />
         <activity android:name="com.example.ui.widgets.custom.canvas.CanvasActivity" />
-        <activity android:name="com.example.ui.widgets.common.viewpager.ViewPagerActivity" />
         <activity
             android:name="com.example.ui.widgets.common.SurfaceVideoActivity"
             android:configChanges="orientation|keyboardHidden"
@@ -103,6 +99,22 @@
         <activity android:name="com.example.ui.fragment.communicate.ResultFragmentActivity" />
         <activity android:name="com.example.ui.fragment.communicate.StackFragmentActivity" />
         <activity android:name="com.example.component.ServiceActivity"></activity>
+
+        <service
+            android:name="com.example.component.service.ForegroundService"
+            android:process=":foregroundService" />
+        <!-- 必须定义在同一进程，不然会出错 -->
+        <service
+            android:name="com.example.component.service.ForegroundService$InnerService"
+            android:process=":foregroundService" />
+
+        <activity android:name="com.example.component.activity.OnePixelActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:finishOnTaskLaunch="false"
+            android:launchMode="singleInstance"
+            android:theme="@style/OnePixelActivityStyle" />
+
     </application>
 
 </manifest>

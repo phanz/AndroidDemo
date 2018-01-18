@@ -7,7 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
+import com.example.component.service.ForegroundService;
 import com.example.component.service.LifeCycleService;
 import com.example.model.Book;
 import com.example.component.service.aidl.binder.BinderPoolImpl;
@@ -33,7 +35,7 @@ public class ServiceActivity extends AppCompatActivity {
         startService(new Intent(this, BinderPoolService.class));
     }
 
-    @OnClick({R.id.service_bind_btn,R.id.service_cycle_btn})
+    @OnClick({R.id.service_bind_btn,R.id.service_cycle_btn,R.id.service_foreground_btn})
     public void onClick(View view){
         int id = view.getId();
         switch (id){
@@ -48,6 +50,12 @@ public class ServiceActivity extends AppCompatActivity {
 
             case R.id.service_cycle_btn:
                 startService(new Intent(this, LifeCycleService.class));
+                break;
+
+            case R.id.service_foreground_btn:
+                Toast.makeText(this,"开启ForegroundService",Toast.LENGTH_SHORT).show();
+                Intent foreService = new Intent(this,ForegroundService.class);
+                startService(foreService);
                 break;
 
             default:
