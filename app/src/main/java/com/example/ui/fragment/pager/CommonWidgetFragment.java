@@ -23,7 +23,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.demo.R;
-import com.example.ui.widgets.common.BackgroundActivity;
+import com.example.ui.widgets.common.DrawableActivity;
 import com.example.ui.widgets.common.VideoViewActivity;
 import com.example.ui.widgets.common.listview.ListViewActivity;
 import com.example.ui.widgets.common.recyclerview.activity.ItemDecorationActivity;
@@ -91,7 +91,7 @@ public class CommonWidgetFragment extends BasePagerFragment {
                 break;
 
             case R.id.drawable_btn:
-                intent = new Intent(getActivity(), BackgroundActivity.class);
+                intent = new Intent(getActivity(), DrawableActivity.class);
                 startActivity(intent);
                 break;
 

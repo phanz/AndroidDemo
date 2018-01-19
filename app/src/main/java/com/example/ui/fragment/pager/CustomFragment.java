@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.demo.R;
-import com.example.ui.widgets.custom.RichTextActivity;
+import com.example.ui.widgets.custom.PictureTextActivity;
 import com.example.ui.widgets.custom.canvas.CanvasActivity;
 import com.example.ui.widgets.custom.compoundbutton.CompoundButtonActivity;
 import com.example.ui.widgets.custom.customview.CustomViewActivity;
@@ -52,7 +52,7 @@ public class CustomFragment extends BasePagerFragment {
         Intent intent = null;
         switch (id){
             case R.id.picture_text_btn:
-                intent = new Intent(getActivity(), RichTextActivity.class);
+                intent = new Intent(getActivity(), PictureTextActivity.class);
                 startActivity(intent);
                 break;
 

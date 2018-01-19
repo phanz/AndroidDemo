@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 import com.example.demo.R;
 
-public class RichTextActivity extends AppCompatActivity {
+public class PictureTextActivity extends AppCompatActivity {
 
     private TitleBar mTitleBar;
 
@@ -61,7 +61,7 @@ public class RichTextActivity extends AppCompatActivity {
             mTitleBar.addAction(new TitleBar.ImageAction(R.drawable.icon_add) {
                 @Override
                 public void performAction(View view) {
-                    Toast.makeText(RichTextActivity.this,"Add Action",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PictureTextActivity.this,"Add Action",Toast.LENGTH_SHORT).show();
                 }
             });
         }

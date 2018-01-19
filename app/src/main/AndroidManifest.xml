@@ -36,7 +36,7 @@
         <activity android:name="com.example.ui.widgets.common.recyclerview.activity.ItemDecorationActivity" />
         <activity android:name="com.example.ui.widgets.custom.gesture.SimpleGestureActivity" />
         <activity android:name="com.example.ui.widgets.custom.customview.CustomViewActivity" />
-        <activity android:name="com.example.ui.widgets.custom.RichTextActivity" />
+        <activity android:name="com.example.ui.widgets.custom.PictureTextActivity" />
         <activity android:name="com.example.security.permission.PermissionActivity" />
         <activity android:name="com.example.ui.widgets.custom.compoundbutton.CompoundButtonActivity" />
         <activity android:name="com.example.ui.widgets.custom.simpleHScrollView.HScrollViewActivity" />
@@ -47,7 +47,7 @@
 
         <receiver android:name="com.example.task.alarmmanager.AlertBroadcastReceiver" />
 
-        <activity android:name="com.example.ui.widgets.common.BackgroundActivity" />
+        <activity android:name="com.example.ui.widgets.common.DrawableActivity" />
         <activity android:name="com.example.ui.widgets.custom.surfaceview.SurfaceActivity" />
         <activity android:name="com.example.ui.widgets.custom.canvas.CanvasActivity" />
         <activity

@@ -15,4 +15,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/image_layer_list" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/girl" />
+
+    <ImageView
+        android:id="@+id/circle_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="10dp" />
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="转换" />
 </LinearLayout>
