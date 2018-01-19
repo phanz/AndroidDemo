@@ -1,22 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:personattr="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_custom_view"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ui.widgets.custom.customview.CustomViewActivity">
+    android:orientation="vertical">
 
-    <com.example.ui.widgets.custom.customview.PersonView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        personattr:name="@string/person_name"
-        personattr:weight ="fat"
-        personattr:adult ="false"
-        personattr:textSize="@dimen/text_size"/>
+    <com.example.ui.widgets.custom.customview.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/colorPrimary"/>
 
-</RelativeLayout>
+    <com.example.ui.widgets.custom.customview.SelectView
+        android:id="@+id/select_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+        app:lineColor="@color/font_text"
+        app:textColor="@color/strong"
+        app:textSize="20dp" />
+
+    <com.example.ui.widgets.custom.customview.NestedParentLayout
+        android:id="@+id/nested_parent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/red">
+
+        <com.example.ui.widgets.custom.customview.NestedChildLayout
+            android:id="@+id/nested_child"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center" />
+
+    </com.example.ui.widgets.custom.customview.NestedParentLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.ui.widgets.custom.customview.CustomViewActivity">
+
+        <LinearLayout
+            android:id="@+id/activity_custom_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.ui.widgets.custom.customview.PersonView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                personattr:name="@string/person_name"
+                personattr:weight ="fat"
+                personattr:adult ="false"
+                personattr:textSize="@dimen/text_size"/>
+
+            <com.example.ui.widgets.custom.customview.RoundImageViewByXfermode
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/girl"
+                app:borderRadius="30dp"
+                app:type="round"/>
+
+            <com.example.ui.widgets.custom.customview.RoundImageViewByXfermode
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/girl"
+                app:type="circle"/>
+
+            <com.example.ui.widgets.custom.customview.RoundImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/girl"
+                app:borderRadius="30dp"
+                app:type="round"/>
+
+            <com.example.ui.widgets.custom.customview.RoundImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/girl"
+                app:type="circle"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

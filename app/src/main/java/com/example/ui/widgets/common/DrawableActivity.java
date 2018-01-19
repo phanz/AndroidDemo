@@ -63,12 +63,12 @@ public class DrawableActivity extends AppCompatActivity {
 //                PorterDuffXfermode porterDuffXfermode = new PorterDuffXfermode(PorterDuff.Mode.SRC_IN);
 //                paint.setXfermode(porterDuffXfermode);
 //                canvas.drawBitmap(newBitmap, 0, 0, paint);
-                /**第二种方式**/
+                /**第二种方式**/ //Glide的方式，图片多时要注意Bitmap的缓存和回收，可以关注下Glide的处理方式(Bitmap池和LRU算法)
 //                BitmapShader bitmapShader = new BitmapShader(newBitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
 //                paint.setShader(bitmapShader);
 //                canvas.drawCircle(width / 2, height / 2, width / 2, paint);
 //                circleImg.setImageBitmap(circleBitmap);
-                /**第三种方式**/
+                /**第三种方式**/  //这种方式会有锯齿，可以试试RoundedBitmapDrawable
                 Path path = new Path();
                 //按照顺时针方向添加一个圆
                 path.addCircle(width / 2, height / 2, width / 2, Path.Direction.CW);

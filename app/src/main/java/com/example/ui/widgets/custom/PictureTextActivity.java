@@ -18,10 +18,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.demo.R;
+import com.example.ui.widgets.custom.customview.TitleBar;
 
 public class PictureTextActivity extends AppCompatActivity {
-
-    private TitleBar mTitleBar;
 
     private EditText mEditText;
     private TextView mImageText;
@@ -31,54 +30,12 @@ public class PictureTextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_custom_widget);
 
-        mTitleBar = (TitleBar) findViewById(R.id.title_bar);
-        initTitleBar();
-
         mEditText = (EditText)findViewById(R.id.edit_span_input);
         mImageText = (TextView) findViewById(R.id.image_span_text);
 
         addEditSpan(mEditText);
         mImageText.setText(Html.fromHtml(descString(),getImageGetterInstance(),null));
 
-    }
-
-    private void initTitleBar(){
-        if (null != mTitleBar) {
-            mTitleBar.setTitle("标题栏");
-            mTitleBar.setTitleColor(Color.WHITE);
-            mTitleBar.setTitleSize(20);
-            mTitleBar.setImmersive(true);
-            setActivityImmersive(this);
-
-            mTitleBar.setLeftImageResource(R.drawable.icon_back);
-            mTitleBar.setLeftClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    finish();
-                }
-            });
-
-            mTitleBar.addAction(new TitleBar.ImageAction(R.drawable.icon_add) {
-                @Override
-                public void performAction(View view) {
-                    Toast.makeText(PictureTextActivity.this,"Add Action",Toast.LENGTH_SHORT).show();
-                }
-            });
-        }
-    }
-
-    private static void setActivityImmersive(Activity activity) {
-        if (Build.VERSION.SDK_INT >= 21) {
-            View decorView = activity.getWindow().getDecorView();
-            int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
-            decorView.setSystemUiVisibility(option);
-            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
-        ActionBar actionBar = activity.getActionBar();
-        if (actionBar != null) {
-            actionBar.hide();
-        }
     }
 
     public void addEditSpan(EditText editText){

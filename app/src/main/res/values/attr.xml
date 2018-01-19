@@ -49,4 +49,10 @@
         <attr name="borderRadius" />
         <attr name="type" />
     </declare-styleable>
+
+    <declare-styleable name="SelectView">
+        <attr name="textColor"/>
+        <attr name="lineColor" format="color"></attr>
+        <attr name="textSize" />
+    </declare-styleable>
 </resources>

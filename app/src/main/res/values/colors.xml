@@ -18,4 +18,8 @@
     <color name="title_bar_blue">#FB5B81</color>
     <color name="btn_bg_gray">#BDBAB5</color>
     <color name="bg_light_gray">#F2F2F2</color>
+
+    <color name="font_text">#000</color>
+    <color name="strong">#FF5B26</color>
+
 </resources>

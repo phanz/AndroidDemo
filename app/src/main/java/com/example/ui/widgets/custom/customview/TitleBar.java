@@ -1,4 +1,4 @@
-package com.example.ui.widgets.custom;
+package com.example.ui.widgets.custom.customview;
 
 import android.content.Context;
 import android.content.res.Resources;
