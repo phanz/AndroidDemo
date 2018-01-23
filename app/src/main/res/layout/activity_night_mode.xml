@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/mainBackground"
+    android:orientation="vertical"
+    tools:context="com.example.component.activity.NightModeActivity">
+
+    <TextView
+        android:id="@+id/hint_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="总共有以下三种实现方式："/>
+
+    <Button
+        android:id="@+id/change_by_theme_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hint_label"
+        android:text="通过主题变更实现"/>
+
+    <Button
+        android:id="@+id/change_by_lib_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_by_theme_btn"
+        android:text="通过Support库实现" />
+
+    <Button
+        android:id="@+id/change_by_dynamic_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_by_lib_btn"
+        android:text="通过资源加载实现" />
+</RelativeLayout>

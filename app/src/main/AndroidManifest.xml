@@ -98,7 +98,7 @@
 
         <activity android:name="com.example.ui.fragment.communicate.ResultFragmentActivity" />
         <activity android:name="com.example.ui.fragment.communicate.StackFragmentActivity" />
-        <activity android:name="com.example.component.ServiceActivity"></activity>
+        <activity android:name="com.example.component.ServiceActivity" />
 
         <service
             android:name="com.example.component.service.ForegroundService"
@@ -108,13 +108,14 @@
             android:name="com.example.component.service.ForegroundService$InnerService"
             android:process=":foregroundService" />
 
-        <activity android:name="com.example.component.activity.OnePixelActivity"
+        <activity
+            android:name="com.example.component.activity.OnePixelActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:finishOnTaskLaunch="false"
             android:launchMode="singleInstance"
             android:theme="@style/OnePixelActivityStyle" />
-
+        <activity android:name="com.example.component.activity.NightModeActivity"></activity>
     </application>
 
 </manifest>

@@ -6,6 +6,7 @@ import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatDelegate;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -34,6 +35,8 @@ public class DemoApp extends Application {
         registerActivityLifecycleCallbacks(new ActivityLifecycleListener());
         sInstance = this;
         mHandler = new Handler();
+        // 默认设置为日间模式
+        //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
     }
 
     @Override

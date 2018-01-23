@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.component.activity.LifeCycleActivity;
+import com.example.component.activity.NightModeActivity;
 import com.example.component.activity.OnePixelActivity;
 import com.example.demo.R;
 
@@ -31,12 +32,23 @@ public class ComponentActivity extends AppCompatActivity {
         startScreenBroadcastReceiver();
     }
 
-    @OnClick({R.id.activity_cycle_btn})
+    @OnClick({ R.id.activity_cycle_btn,R.id.one_pixel_activity_btn,R.id.night_mode_btn })
     public void onClick(View view){
         int id = view.getId();
+        Intent intent = null;
         switch (id){
             case R.id.activity_cycle_btn:
-                Intent intent = new Intent(this,LifeCycleActivity.class);
+                intent = new Intent(this,LifeCycleActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.one_pixel_activity_btn:
+                intent = new Intent(this,OnePixelActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.night_mode_btn:
+                intent = new Intent(this,NightModeActivity.class);
                 startActivity(intent);
                 break;
 

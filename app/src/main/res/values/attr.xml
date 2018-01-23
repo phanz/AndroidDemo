@@ -55,4 +55,6 @@
         <attr name="lineColor" format="color"></attr>
         <attr name="textSize" />
     </declare-styleable>
+
+    <attr name="mainBackground" format="color|reference"></attr>
 </resources>
