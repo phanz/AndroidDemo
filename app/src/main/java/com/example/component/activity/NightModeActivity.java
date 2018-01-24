@@ -22,7 +22,7 @@ import butterknife.OnClick;
 
 public class NightModeActivity extends AppCompatActivity implements ThemeManager.OnThemeChangeListener {
 
-    private int mThemeNow = R.style.AppTheme;
+    private int mThemeNow = R.style.AppTheme;//通过主题更改时，记录所选择的主题
 
     @BindView(R.id.hint_label)
     public TextView tv;
@@ -84,10 +84,6 @@ public class NightModeActivity extends AppCompatActivity implements ThemeManager
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         mThemeNow = savedInstanceState.getInt("theme");
-    }
-
-    public void initTheme() {
-
     }
 
     @Override

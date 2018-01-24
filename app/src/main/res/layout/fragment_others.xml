@@ -5,8 +5,21 @@
     android:layout_height="match_parent">
 
 
-    <TextView
+    <Button
+        android:id="@+id/load_installed_apk_res_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="hello"/>
+        android:text="加载已安装APK资源"/>
+
+    <Button
+        android:id="@+id/load_apk_res_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="加载未安装APK资源"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside" />
 </LinearLayout>
