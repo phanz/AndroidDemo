@@ -43,7 +43,6 @@ dependencies {
     compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
     compile 'com.squareup.okhttp3:logging-interceptor:3.8.1'
     compile 'com.google.code.gson:gson:2.8.1'
-    compile project(':Utils')
     compile files('libs/zxing-core.jar')
     compile files('libs/Amap_2DMap_V5.2.0_20170627.jar')
     compile files('libs/AMap_Location_V3.6.1_20171012.jar')

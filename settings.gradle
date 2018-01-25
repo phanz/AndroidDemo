@@ -1,2 +1,1 @@
-include ':app', ':Utils'
-project(':Utils').projectDir = new File('AndroidUtils/app')
+include ':app'
