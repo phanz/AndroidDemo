@@ -9,15 +9,11 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.demo.R;
-import com.example.ui.widgets.custom.PictureTextActivity;
-import com.example.ui.widgets.custom.canvas.CanvasActivity;
-import com.example.ui.widgets.custom.compoundbutton.CompoundButtonActivity;
-import com.example.ui.widgets.custom.customview.CustomViewActivity;
-import com.example.ui.widgets.custom.simpleHScrollView.HScrollViewActivity;
-import com.example.ui.widgets.custom.simpleHScrollView2.HScrollView2Activity;
-import com.example.ui.widgets.custom.surfaceview.SurfaceActivity;
-import com.example.ui.widgets.custom.animation.AnimationActivity;
-import com.example.ui.widgets.custom.gesture.SimpleGestureActivity;
+import com.example.ui.activity.PictureTextActivity;
+import com.example.ui.activity.CustomViewActivity;
+import com.example.ui.activity.HScrollViewActivity;
+import com.example.ui.activity.SimpleViewActivity;
+import com.example.ui.activity.SimpleGestureActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -44,25 +40,14 @@ public class CustomFragment extends BasePagerFragment {
         return view;
     }
 
-    @OnClick({ R.id.picture_text_btn,R.id.canvas_btn,R.id.compound_btn,R.id.custom_view_btn,
-            R.id.h_scroll_view_btn,R.id.h_scroll_view2_btn,R.id.surface_view_btn,
-            R.id.animation_btn,R.id.gesture_btn,R.id.touch_event_btn})
+    @OnClick({ R.id.picture_text_btn,R.id.custom_view_btn,R.id.h_scroll_view_btn,
+            R.id.simple_view_btn, R.id.gesture_btn,R.id.touch_event_btn})
     public void onClick(View view){
         int id = view.getId();
         Intent intent = null;
         switch (id){
             case R.id.picture_text_btn:
                 intent = new Intent(getActivity(), PictureTextActivity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.canvas_btn:
-                intent = new Intent(getActivity(), CanvasActivity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.compound_btn:
-                intent = new Intent(getActivity(), CompoundButtonActivity.class);
                 startActivity(intent);
                 break;
 
@@ -76,18 +61,8 @@ public class CustomFragment extends BasePagerFragment {
                 startActivity(intent);
                 break;
 
-            case R.id.h_scroll_view2_btn:
-                intent = new Intent(getActivity(), HScrollView2Activity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.surface_view_btn:
-                intent = new Intent(getActivity(), SurfaceActivity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.animation_btn:
-                intent = new Intent(getActivity(), AnimationActivity.class);
+            case R.id.simple_view_btn:
+                intent = new Intent(getActivity(), SimpleViewActivity.class);
                 startActivity(intent);
                 break;
 

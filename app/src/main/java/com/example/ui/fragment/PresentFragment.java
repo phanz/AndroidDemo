@@ -12,8 +12,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.component.ComponentActivity;
-import com.example.component.ServiceActivity;
+import com.example.ui.activity.ComponentActivity;
+import com.example.ui.activity.ServiceActivity;
 import com.example.demo.R;
 import com.example.ui.fragment.communicate.ReplaceFragment;
 import com.example.ui.fragment.pager.BasePagerFragment;

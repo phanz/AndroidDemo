@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.ui.widgets.custom.PictureTextActivity">
+        tools:context="com.example.ui.activity.PictureTextActivity">
 
         <EditText
             android:id="@+id/edit_span_input"

@@ -22,8 +22,7 @@ public class FlowLayout extends ViewGroup {
     }
 
     @Override
-    protected LayoutParams generateLayoutParams(
-            LayoutParams p) {
+    protected LayoutParams generateLayoutParams(LayoutParams p) {
         return new MarginLayoutParams(p);
     }
 

@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.demo.R;
-import com.example.ui.adapter.DemoFragmentPagerAdapter;
 import com.example.ui.fragment.pager.CommonWidgetFragment;
 import com.example.ui.fragment.pager.CustomFragment;
 import com.example.ui.fragment.pager.DataFragment;

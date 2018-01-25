@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ui.widgets.custom.animation.AnimationActivity">
+    tools:context="com.example.ui.activity.AnimationActivity">
 
     <Spinner
         android:id="@+id/interpolator_type_spinner"
@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:entries="@array/interpolator_type"/>
 
-    <com.example.ui.widgets.custom.animation.PointAnimView
+    <com.example.ui.widgets.common.animation.PointAnimView
         android:id="@+id/point_anim_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>

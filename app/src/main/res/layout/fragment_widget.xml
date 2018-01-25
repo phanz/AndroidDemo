@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ui.widgets.custom.PictureTextActivity">
+    tools:context="com.example.ui.activity.PictureTextActivity">
 
     <Button
         android:id="@+id/picture_text_btn"
@@ -12,20 +12,6 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:text="图片和文字"/>
-
-    <Button
-        android:id="@+id/canvas_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Canvas"/>
-
-    <Button
-        android:id="@+id/compound_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Compound Btn"/>
 
     <Button
         android:id="@+id/custom_view_btn"
@@ -42,25 +28,11 @@
         android:text="HScrollView"/>
 
     <Button
-        android:id="@+id/h_scroll_view2_btn"
+        android:id="@+id/simple_view_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAllCaps="false"
-        android:text="HScrollView2"/>
-
-    <Button
-        android:id="@+id/surface_view_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Surface View"/>
-
-    <Button
-        android:id="@+id/animation_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAllCaps="false"
-        android:text="Animation"/>
+        android:text="Simple View"/>
 
     <Button
         android:id="@+id/gesture_btn"
